@@ -1,0 +1,19 @@
+section,item,finding,evidence
+S43 equivalence,Dynamic vs ex post constant-lambda | total_return,Equivalent within margin,"Observed diff=-0.000232; CI=[-0.000591,0.000048]; margin=±0.010000."
+S43 equivalence,Dynamic vs ex post constant-lambda | sharpe,Equivalent within margin,"Observed diff=-0.001104; CI=[-0.003045,0.000695]; margin=±0.050000."
+S43 equivalence,Dynamic vs ex post constant-lambda | sortino,Equivalent within margin,"Observed diff=-0.001803; CI=[-0.005129,0.000740]; margin=±0.100000."
+S43 equivalence,Dynamic vs ex post constant-lambda | max_drawdown,Equivalent within margin,"Observed diff=-0.000008; CI=[-0.000134,0.000030]; margin=±0.010000."
+S43 equivalence,Dynamic vs ex post constant-lambda | avg_cash,Equivalent within margin,"Observed diff=0.000018; CI=[-0.000048,0.000099]; margin=±0.010000."
+S43 equivalence,Dynamic vs ex post constant-lambda | cash_cap_binding,Equivalent within margin,"Observed diff=0.000000; CI=[0.000000,0.000000]; margin=±0.010000."
+S43 equivalence,Dynamic vs ex post no-probability constant-lambda | total_return,Equivalent within margin,"Observed diff=-0.000208; CI=[-0.000553,0.000052]; margin=±0.010000."
+S43 equivalence,Dynamic vs ex post no-probability constant-lambda | sharpe,Equivalent within margin,"Observed diff=-0.001005; CI=[-0.002776,0.000618]; margin=±0.050000."
+S43 equivalence,Dynamic vs ex post no-probability constant-lambda | sortino,Equivalent within margin,"Observed diff=-0.001672; CI=[-0.004787,0.000673]; margin=±0.100000."
+S43 equivalence,Dynamic vs ex post no-probability constant-lambda | max_drawdown,Equivalent within margin,"Observed diff=-0.000012; CI=[-0.000137,0.000026]; margin=±0.010000."
+S43 equivalence,Dynamic vs ex post no-probability constant-lambda | avg_cash,Equivalent within margin,"Observed diff=0.000017; CI=[-0.000052,0.000100]; margin=±0.010000."
+S43 equivalence,Dynamic vs ex post no-probability constant-lambda | cash_cap_binding,Equivalent within margin,"Observed diff=0.000000; CI=[0.000000,0.000000]; margin=±0.010000."
+S44 pre-evaluation lambda,Notebook21 dynamic AURORA,Strict-test performance under selected pre-evaluation lambda nan,TR=0.2361; Sharpe=1.7306; MDD=-0.1198; avg cash=0.6000.
+S44 pre-evaluation lambda,Notebook21 pre-eval constant-lambda 21,Strict-test performance under selected pre-evaluation lambda 21.0,TR=0.2366; Sharpe=1.7327; MDD=-0.1198; avg cash=0.6000.
+S44 pre-evaluation lambda,Notebook21 pre-eval no-probability constant-lambda 21,Strict-test performance under selected pre-evaluation lambda 21.0,TR=0.2366; Sharpe=1.7327; MDD=-0.1198; avg cash=0.6000.
+S46 cash-return sensitivity,Ex post constant-lambda AURORA,Nonzero cash return changes absolute performance but not the dynamic-vs-constant attribution conclusion.,Avg cash=0.5565; highest-minus-base TR change=0.0174.
+S46 cash-return sensitivity,Ex post no-probability constant-lambda AURORA,Nonzero cash return changes absolute performance but not the dynamic-vs-constant attribution conclusion.,Avg cash=0.5565; highest-minus-base TR change=0.0174.
+S46 cash-return sensitivity,Original dynamic AURORA,Nonzero cash return changes absolute performance but not the dynamic-vs-constant attribution conclusion.,Avg cash=0.5565; highest-minus-base TR change=0.0174.

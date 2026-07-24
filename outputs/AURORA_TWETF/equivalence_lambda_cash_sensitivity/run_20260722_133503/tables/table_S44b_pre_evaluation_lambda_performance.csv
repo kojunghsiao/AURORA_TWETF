@@ -1,0 +1,4 @@
+strategy_control,calibration_source,selected_lambda,test_total_return,test_sharpe,test_sortino,test_max_drawdown,avg_cash,days_at_cash_cap,n_days
+Notebook21 dynamic AURORA,pre-evaluation out-of-sample prediction dates,,0.2360849052901064,1.7305813028791592,2.233324001444653,-0.11975195538927907,0.6,1.0,319
+Notebook21 pre-eval constant-lambda 21,pre-evaluation out-of-sample prediction dates,21.0,0.23656124942428947,1.732701771578076,2.236808710625168,-0.11977871796850004,0.6,1.0,319
+Notebook21 pre-eval no-probability constant-lambda 21,pre-evaluation out-of-sample prediction dates,21.0,0.23656124942428947,1.732701771578076,2.236808710625168,-0.11977871796850004,0.6,1.0,319

@@ -1,0 +1,13 @@
+comparison,metric,observed_difference,ci95_lower,ci95_upper,equivalence_margin,equivalence_result,bootstrap_replications,block_length,n_days
+Dynamic vs ex post constant-lambda,total_return,-0.000232,-0.000591,4.8e-05,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post constant-lambda,sharpe,-0.001104,-0.003045,0.000695,0.05,Equivalent within margin,5000,20,319
+Dynamic vs ex post constant-lambda,sortino,-0.001803,-0.005129,0.00074,0.1,Equivalent within margin,5000,20,319
+Dynamic vs ex post constant-lambda,max_drawdown,-8e-06,-0.000134,3e-05,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post constant-lambda,avg_cash,1.8e-05,-4.8e-05,9.9e-05,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post constant-lambda,cash_cap_binding,0.0,0.0,0.0,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,total_return,-0.000208,-0.000553,5.2e-05,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,sharpe,-0.001005,-0.002776,0.000618,0.05,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,sortino,-0.001672,-0.004787,0.000673,0.1,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,max_drawdown,-1.2e-05,-0.000137,2.6e-05,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,avg_cash,1.7e-05,-5.2e-05,0.0001,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,cash_cap_binding,0.0,0.0,0.0,0.01,Equivalent within margin,5000,20,319

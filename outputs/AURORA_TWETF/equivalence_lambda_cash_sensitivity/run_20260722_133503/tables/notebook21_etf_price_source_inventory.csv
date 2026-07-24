@@ -1,0 +1,5 @@
+asset,path,column,n,start,end
+0050,/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/0050_0050_TW.csv,Adj Close_0050.TW,1324,2021-01-04,2026-06-23
+006208,/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/006208_006208_TW.csv,Adj Close_006208.TW,1324,2021-01-04,2026-06-23
+00692,/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/00692_00692_TW.csv,Adj Close_00692.TW,1324,2021-01-04,2026-06-23
+00881,/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/00881_00881_TW.csv,Adj Close_00881.TW,1324,2021-01-04,2026-06-23

@@ -1,0 +1,44 @@
+{
+  "project_code": "AURORA_TWETF",
+  "notebook": "21_revised_equivalence_pre_eval_lambda_optimizer_diagnostics",
+  "run_timestamp_utc": "2026-07-22T13:35:03Z",
+  "run_id": "20260722_133503",
+  "inputs_found": {
+    "notebook18_returns": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_exposure_matched_lambda_reduced_universe/run_20260717_082548/returns/all_notebook18_returns.csv",
+    "notebook18_weights": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_exposure_matched_lambda_reduced_universe/run_20260717_082548/weights/all_notebook18_weights.parquet",
+    "notebook18_diagnostics": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_exposure_matched_lambda_reduced_universe/run_20260717_082548/diagnostics/all_notebook18_diagnostics.csv",
+    "notebook08_input_index": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/NOTEBOOK08_OR_ALLOCATION_INPUT_INDEX_PURGED_WF.csv",
+    "raw_yfinance_dir": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance"
+  },
+  "equivalence_settings": {
+    "bootstrap_replications": 5000,
+    "block_length": 20,
+    "equivalence_margins": {
+      "total_return": 0.01,
+      "sharpe": 0.05,
+      "sortino": 0.1,
+      "max_drawdown": 0.01,
+      "avg_cash": 0.01,
+      "cash_cap_binding": 0.01
+    }
+  },
+  "pre_evaluation_lambda_settings": {
+    "lambda_grid_min": 0.0,
+    "lambda_grid_max": 100.0,
+    "lambda_grid_step": 1.0,
+    "selected_lambda_pre_eval": 21.0,
+    "rebalance_convention": "month_end",
+    "transaction_cost_bps": 10
+  },
+  "outputs": {
+    "table_S43": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/equivalence_lambda_cash_sensitivity/run_20260722_133503/tables/table_S43_constant_lambda_equivalence_tests.csv",
+    "table_S43b": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/equivalence_lambda_cash_sensitivity/run_20260722_133503/tables/table_S43b_constant_lambda_equivalence_summary.csv",
+    "table_S44": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/equivalence_lambda_cash_sensitivity/run_20260722_133503/tables/table_S44_pre_evaluation_constant_lambda_calibration.csv",
+    "table_S44b": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/equivalence_lambda_cash_sensitivity/run_20260722_133503/tables/table_S44b_pre_evaluation_lambda_performance.csv",
+    "table_S45": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/equivalence_lambda_cash_sensitivity/run_20260722_133503/tables/table_S45_optimizer_reliability_diagnostics.csv",
+    "table_S45b": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/equivalence_lambda_cash_sensitivity/run_20260722_133503/tables/table_S45b_constraint_binding_diagnostics.csv"
+  },
+  "warnings": [
+    "Source-aware cash-return sensitivity skipped by design because exact source-aware cash-weight files were not used. Only valid Notebook18 dynamic/constant-lambda diagnostic strategies are reported."
+  ]
+}
