@@ -60,30 +60,27 @@ AURORA_TWETF/
 ├── EXECUTION_ORDER.md
 ├── ENVIRONMENT.md
 ├── requirements.txt
+├── requirements_project_versions.txt
+├── requirements_colab_full.txt
+│
 ├── notebooks/
-│   ├── 01_*.ipynb
-│   ├── 02_*.ipynb
-│   ├── ...
-│   ├── 21_equivalence_pre_eval_lambda_optimizer_diagnostics.ipynb
-│   ├── 22_cash_return_risk_free_sensitivity.ipynb
-│   └── 23_canonical_passive_benchmark_reconciliation.ipynb
-├── data/
-│   ├── raw_yfinance/
-│   ├── modeling/
-│   └── processed/
+│   └── all Colab notebooks
+│
 ├── outputs/
-│   ├── tables/
-│   ├── figures/
-│   ├── reports/
-│   ├── returns/
-│   ├── weights/
-│   └── diagnostics/
-├── reproducibility/
-│   ├── OUTPUT_MANIFEST.csv
-│   ├── pipeline_metadata_AURORA_TWETF.csv
-│   ├── random_seeds.md
-│   └── validation_reports/
-└── manuscript/
-    ├── tables/
-    ├── figures/
-    └── supplementary_tables/
+│   └── AURORA_TWETF/
+│       ├── canonical_passive_benchmarks/
+│       │   └── run_20260723_035525/
+│       ├── equivalence_lambda_cash_sensitivity/
+│       │   └── run_20260722_133503/
+│       ├── tables/
+│       ├── figures/
+│       ├── reports/
+│       ├── returns/
+│       ├── weights/
+│       └── diagnostics/
+│
+└── reproducibility/
+    ├── OUTPUT_MANIFEST.csv
+    ├── pipeline_metadata_AURORA_TWETF.csv
+    ├── random_seeds.md
+    └── validation_reports/
