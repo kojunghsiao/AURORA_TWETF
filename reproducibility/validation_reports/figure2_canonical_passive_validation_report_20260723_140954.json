@@ -1,0 +1,84 @@
+{
+  "run_id": "20260723_140954",
+  "purpose": "Regenerate Figure 2 using canonical 00881-only passive benchmark instead of source-specific ROMA-B6.",
+  "strict_start": "2024-11-27",
+  "strict_end": "2026-03-25",
+  "n_common_dates": 319,
+  "common_start": "2024-11-27",
+  "common_end": "2026-03-25",
+  "source_aware_return_matrix": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/returns/notebook13B_source_aware_strict_test_return_matrix.parquet",
+  "canonical_passive_return_matrix": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/canonical_passive_benchmarks/run_20260723_035525/returns/canonical_passive_strict_test_return_matrix.parquet",
+  "series_mapping": [
+    {
+      "plot_label": "AURORA10-UAMV-B",
+      "source_file": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/returns/notebook13B_source_aware_strict_test_return_matrix.parquet",
+      "source_column": "AURORA10_UAMV_B_more60_defensive",
+      "role": "Primary defensive AURORA variant"
+    },
+    {
+      "plot_label": "ROMA-P4",
+      "source_file": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/returns/notebook13B_source_aware_strict_test_return_matrix.parquet",
+      "source_column": "ROMA_P4_balanced_regime_blend",
+      "role": "Primary ROMA baseline"
+    },
+    {
+      "plot_label": "ROMA-B12",
+      "source_file": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/returns/notebook13B_source_aware_strict_test_return_matrix.parquet",
+      "source_column": "ROMA_B12_ma_timing_equal_weight",
+      "role": "ETF-level 126-day MA timing benchmark"
+    },
+    {
+      "plot_label": "Canonical 00881-only passive",
+      "source_file": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/canonical_passive_benchmarks/run_20260723_035525/returns/canonical_passive_strict_test_return_matrix.parquet",
+      "source_column": "Canonical 00881-only",
+      "role": "Canonical technology-oriented passive benchmark"
+    }
+  ],
+  "drawdown_summary": [
+    {
+      "strategy": "AURORA10-UAMV-B",
+      "n_days": 319,
+      "start_date": "2024-11-27",
+      "end_date": "2026-03-25",
+      "total_return": 0.3815196963406473,
+      "max_drawdown": -0.11678757250401262,
+      "drawdown_end_date": "2025-04-09"
+    },
+    {
+      "strategy": "ROMA-P4",
+      "n_days": 319,
+      "start_date": "2024-11-27",
+      "end_date": "2026-03-25",
+      "total_return": 0.5240281691078998,
+      "max_drawdown": -0.24163449128079417,
+      "drawdown_end_date": "2025-04-09"
+    },
+    {
+      "strategy": "ROMA-B12",
+      "n_days": 319,
+      "start_date": "2024-11-27",
+      "end_date": "2026-03-25",
+      "total_return": 0.6522403462243178,
+      "max_drawdown": -0.09430744809605618,
+      "drawdown_end_date": "2026-03-09"
+    },
+    {
+      "strategy": "Canonical 00881-only passive",
+      "n_days": 319,
+      "start_date": "2024-11-27",
+      "end_date": "2026-03-25",
+      "total_return": 0.7494783804974252,
+      "max_drawdown": -0.3000123285077043,
+      "drawdown_end_date": "2025-04-09"
+    }
+  ],
+  "outputs": {
+    "png": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/figures/figure_2_drawdown_canonical_passive.png",
+    "pdf": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/figures/figure_2_drawdown_canonical_passive.pdf",
+    "svg": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/figures/figure_2_drawdown_canonical_passive.svg",
+    "mapping_table": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/tables/table_figure2_series_mapping.csv",
+    "drawdown_summary": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/tables/table_figure2_drawdown_summary.csv",
+    "return_matrix": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/tables/figure2_return_matrix_canonical_passive.csv"
+  },
+  "caption": "Figure 2. Drawdown comparison of AURORA10-UAMV-B, ROMA-P4, ROMA-B12, and the canonical 00881-only passive benchmark during the aligned out-of-sample evaluation window."
+}

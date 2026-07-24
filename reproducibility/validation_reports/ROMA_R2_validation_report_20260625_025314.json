@@ -1,0 +1,264 @@
+{
+  "project_code": "ROMA_TWETF",
+  "notebook": "R2_ROMA_aligned_allocation_backtest.ipynb",
+  "run_timestamp_utc": "2026-06-25T02:53:14Z",
+  "run_id": "20260625_025314",
+  "roma_r1_run_id": "20260625_023629",
+  "purpose": "Convert ROMA R1 purged walk-forward regime probabilities into aligned return-seeking ETF allocation policies and compare against strong benchmarks.",
+  "r1_dedup_input_index": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/purged_walk_forward_regime_signals/run_20260625_023629/NOTEBOOK_R2_ROMA_DEDUP_INPUT_INDEX.csv",
+  "etf_return_panel_path": "/content/drive/MyDrive/AURORA_TWETF/data/panels/AURORA_etf_return_panel.parquet",
+  "etf_universe": [
+    "0050",
+    "006208",
+    "00692",
+    "00881"
+  ],
+  "cash_column": "CASH",
+  "transaction_cost_rate": 0.001,
+  "rebalance_frequency": "monthly",
+  "annualization": 252,
+  "evaluation_dates": {
+    "oos_validation_plus_test": {
+      "n_dates": 508,
+      "start_date": "2024-02-20",
+      "end_date": "2026-03-25"
+    },
+    "strict_test_only": {
+      "n_dates": 319,
+      "start_date": "2024-11-27",
+      "end_date": "2026-03-25"
+    }
+  },
+  "roma_policy_configs": {
+    "ROMA_P0_validation_selected_20_60_blend": {
+      "description": "Validation-selected ROMA ensemble with 50/50 blend of 20d and 60d probabilities.",
+      "template": "template_return_seeking",
+      "alpha_20d": 0.5,
+      "alpha_60d": 0.5,
+      "max_etf_weight": 0.7,
+      "max_00881_weight": 0.6,
+      "max_cash_weight": 0.6,
+      "confidence_cash_control": true,
+      "uncertainty_cash_boost_max": 0.1,
+      "bearish_cash_boost_max": 0.15
+    },
+    "ROMA_P1_more20_return_seeking": {
+      "description": "Return-seeking ROMA with stronger reliance on 20d signal because R1 showed stronger 20d diagnostics.",
+      "template": "template_return_seeking",
+      "alpha_20d": 0.7,
+      "alpha_60d": 0.3,
+      "max_etf_weight": 0.7,
+      "max_00881_weight": 0.6,
+      "max_cash_weight": 0.55,
+      "confidence_cash_control": true,
+      "uncertainty_cash_boost_max": 0.08,
+      "bearish_cash_boost_max": 0.12
+    },
+    "ROMA_P2_20d_only_return_seeking": {
+      "description": "20d-only ROMA return-seeking policy; included because 20d R1 signal was stronger than 60d signal.",
+      "template": "template_aggressive_growth",
+      "alpha_20d": 1.0,
+      "alpha_60d": 0.0,
+      "max_etf_weight": 0.75,
+      "max_00881_weight": 0.7,
+      "max_cash_weight": 0.55,
+      "confidence_cash_control": true,
+      "uncertainty_cash_boost_max": 0.05,
+      "bearish_cash_boost_max": 0.1
+    },
+    "ROMA_P3_conservative_blend": {
+      "description": "Conservative ROMA blend using balanced regime template and stronger cash control.",
+      "template": "template_conservative_return",
+      "alpha_20d": 0.6,
+      "alpha_60d": 0.4,
+      "max_etf_weight": 0.55,
+      "max_00881_weight": 0.35,
+      "max_cash_weight": 0.65,
+      "confidence_cash_control": true,
+      "uncertainty_cash_boost_max": 0.15,
+      "bearish_cash_boost_max": 0.2
+    },
+    "ROMA_P4_balanced_regime_blend": {
+      "description": "Balanced regime ROMA template, close to the original hand-crafted AURORA-style mapping but more return-oriented.",
+      "template": "template_balanced_regime",
+      "alpha_20d": 0.6,
+      "alpha_60d": 0.4,
+      "max_etf_weight": 0.6,
+      "max_00881_weight": 0.45,
+      "max_cash_weight": 0.55,
+      "confidence_cash_control": true,
+      "uncertainty_cash_boost_max": 0.1,
+      "bearish_cash_boost_max": 0.15
+    }
+  },
+  "templates": {
+    "template_return_seeking": {
+      "0": {
+        "0050": 0.1,
+        "006208": 0.2,
+        "00692": 0.2,
+        "00881": 0.0,
+        "CASH": 0.5
+      },
+      "1": {
+        "0050": 0.2,
+        "006208": 0.3,
+        "00692": 0.25,
+        "00881": 0.05,
+        "CASH": 0.2
+      },
+      "2": {
+        "0050": 0.3,
+        "006208": 0.3,
+        "00692": 0.25,
+        "00881": 0.15,
+        "CASH": 0.0
+      },
+      "3": {
+        "0050": 0.3,
+        "006208": 0.25,
+        "00692": 0.15,
+        "00881": 0.3,
+        "CASH": 0.0
+      },
+      "4": {
+        "0050": 0.2,
+        "006208": 0.15,
+        "00692": 0.1,
+        "00881": 0.55,
+        "CASH": 0.0
+      }
+    },
+    "template_aggressive_growth": {
+      "0": {
+        "0050": 0.15,
+        "006208": 0.15,
+        "00692": 0.2,
+        "00881": 0.0,
+        "CASH": 0.5
+      },
+      "1": {
+        "0050": 0.2,
+        "006208": 0.25,
+        "00692": 0.25,
+        "00881": 0.1,
+        "CASH": 0.2
+      },
+      "2": {
+        "0050": 0.25,
+        "006208": 0.25,
+        "00692": 0.2,
+        "00881": 0.3,
+        "CASH": 0.0
+      },
+      "3": {
+        "0050": 0.25,
+        "006208": 0.2,
+        "00692": 0.1,
+        "00881": 0.45,
+        "CASH": 0.0
+      },
+      "4": {
+        "0050": 0.15,
+        "006208": 0.1,
+        "00692": 0.05,
+        "00881": 0.7,
+        "CASH": 0.0
+      }
+    },
+    "template_balanced_regime": {
+      "0": {
+        "0050": 0.15,
+        "006208": 0.25,
+        "00692": 0.25,
+        "00881": 0.0,
+        "CASH": 0.35
+      },
+      "1": {
+        "0050": 0.25,
+        "006208": 0.3,
+        "00692": 0.3,
+        "00881": 0.05,
+        "CASH": 0.1
+      },
+      "2": {
+        "0050": 0.3,
+        "006208": 0.3,
+        "00692": 0.25,
+        "00881": 0.15,
+        "CASH": 0.0
+      },
+      "3": {
+        "0050": 0.3,
+        "006208": 0.25,
+        "00692": 0.2,
+        "00881": 0.25,
+        "CASH": 0.0
+      },
+      "4": {
+        "0050": 0.25,
+        "006208": 0.2,
+        "00692": 0.15,
+        "00881": 0.4,
+        "CASH": 0.0
+      }
+    },
+    "template_conservative_return": {
+      "0": {
+        "0050": 0.1,
+        "006208": 0.25,
+        "00692": 0.25,
+        "00881": 0.0,
+        "CASH": 0.4
+      },
+      "1": {
+        "0050": 0.25,
+        "006208": 0.3,
+        "00692": 0.3,
+        "00881": 0.0,
+        "CASH": 0.15
+      },
+      "2": {
+        "0050": 0.35,
+        "006208": 0.3,
+        "00692": 0.25,
+        "00881": 0.1,
+        "CASH": 0.0
+      },
+      "3": {
+        "0050": 0.35,
+        "006208": 0.25,
+        "00692": 0.2,
+        "00881": 0.2,
+        "CASH": 0.0
+      },
+      "4": {
+        "0050": 0.3,
+        "006208": 0.2,
+        "00692": 0.15,
+        "00881": 0.35,
+        "CASH": 0.0
+      }
+    }
+  },
+  "benchmark_policy_count": 15,
+  "output_paths": {
+    "run_root": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/aligned_allocation_backtest/run_20260625_025314",
+    "returns_parquet": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/aligned_allocation_backtest/run_20260625_025314/returns/roma_R2_all_returns.parquet",
+    "weights_parquet": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/aligned_allocation_backtest/run_20260625_025314/weights/roma_R2_all_weights.parquet",
+    "components_parquet": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/aligned_allocation_backtest/run_20260625_025314/weights/roma_R2_policy_components.parquet",
+    "r3_input_index": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/aligned_allocation_backtest/run_20260625_025314/NOTEBOOK_R3_ROMA_INPUT_INDEX.csv",
+    "tables": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/aligned_allocation_backtest/run_20260625_025314/tables",
+    "reports": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/aligned_allocation_backtest/run_20260625_025314/reports",
+    "figures": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/aligned_allocation_backtest/run_20260625_025314/figures"
+  },
+  "important_methodological_notes": [
+    "ROMA R2 uses R1 validation-selected probability sources.",
+    "ROMA policy templates are pre-defined and not optimized on strict-test data.",
+    "All ROMA policies and benchmarks are evaluated on identical aligned dates within each split.",
+    "Strict-test comparison uses the common intersection of 20d and 60d test probability dates and ETF return dates.",
+    "Statistical inference is not performed in R2; it is performed in R3.",
+    "Unified ROMA-AURORA comparison is reserved for Notebook 13."
+  ],
+  "educational_note": "This notebook is for reproducible financial machine-learning research only. It does not provide personalized financial advice or performance guarantees."
+}

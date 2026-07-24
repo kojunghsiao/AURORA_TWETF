@@ -1,0 +1,118 @@
+{
+  "project_code": "AURORA_TWETF",
+  "notebook": "20_AURORA_feature_observability_timestamp_lag_audit",
+  "run_timestamp_utc": "2026-07-18T15:43:26Z",
+  "run_id": "20260718_154326",
+  "purpose": "Automated audit of whether final modeling-matrix feature columns satisfy market-source observability and lag conventions, especially for non-Taiwan market variables.",
+  "input_paths": {
+    "modeling_matrix": "/content/drive/MyDrive/AURORA_TWETF/data/modeling/AURORA_TWETF_features_with_labels.parquet",
+    "feature_metadata_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/tables/table_09_feature_metadata.csv"
+  },
+  "configuration": {
+    "decision_timestamp_convention": "Taiwan after-close forecast/allocation timestamp; same-calendar-date U.S. market close is not assumed observable before the Taiwan decision.",
+    "shift_ambiguous_external_features": false,
+    "conservative_lag_for_regional_and_fx": true,
+    "empirical_match_corr_threshold": 0.999,
+    "minimum_empirical_match_observations": 80
+  },
+  "modeling_matrix": {
+    "n_rows": 1262,
+    "n_columns": 417,
+    "n_candidate_feature_columns": 415,
+    "date_start": "2021-01-06",
+    "date_end": "2026-03-25"
+  },
+  "audit_results": {
+    "n_classified_market_state_feature_columns": 415,
+    "n_definite_timestamp_violation_columns": 0,
+    "n_ambiguous_external_lag_required_columns": 0,
+    "n_dates_changed_after_proposed_correction": 0,
+    "overall_status": "The audit found zero detected timestamp violations.",
+    "manuscript_sentence": "The automated feature-observability audit found zero detected timestamp violations across classified market-state feature columns."
+  },
+  "source_series_found": {
+    "TAIEX": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/TAIEX_TWII.csv",
+      "column": "Adj Close_^TWII",
+      "score": 1.3499999999999999
+    },
+    "0050": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/0050_0050_TW.csv",
+      "column": "Adj Close_0050.TW",
+      "score": 1.5999999999999999
+    },
+    "006208": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/006208_006208_TW.csv",
+      "column": "Adj Close_006208.TW",
+      "score": 1.5999999999999999
+    },
+    "00692": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/00692_00692_TW.csv",
+      "column": "Adj Close_00692.TW",
+      "score": 1.5999999999999999
+    },
+    "00881": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/00881_00881_TW.csv",
+      "column": "Adj Close_00881.TW",
+      "score": 1.5999999999999999
+    },
+    "S&P 500": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/SP500_GSPC.csv",
+      "column": "Adj Close_^GSPC",
+      "score": 1.3499999999999999
+    },
+    "NASDAQ": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/NASDAQ_IXIC.csv",
+      "column": "Adj Close_^IXIC",
+      "score": 1.3499999999999999
+    },
+    "SOXX": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/SOXX_SOXX.csv",
+      "column": "Adj Close_SOXX",
+      "score": 1.5999999999999999
+    },
+    "VIX": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/VIX_VIX.csv",
+      "column": "Adj Close_^VIX",
+      "score": 1.5999999999999999
+    },
+    "U.S. 10-year Treasury yield": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/US10Y_TNX.csv",
+      "column": "Adj Close_^TNX",
+      "score": 1.3499999999999999
+    },
+    "Nikkei 225": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/NIKKEI225_N225.csv",
+      "column": "Adj Close_^N225",
+      "score": 1.3499999999999999
+    },
+    "Hang Seng": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/HANGSENG_HSI.csv",
+      "column": "Adj Close_^HSI",
+      "score": 1.3499999999999999
+    },
+    "KOSPI": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/KOSPI_KS11.csv",
+      "column": "Adj Close_^KS11",
+      "score": 1.3499999999999999
+    },
+    "USD/TWD": {
+      "path": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/USD_TWD_TWD_X.csv",
+      "column": "Adj Close_TWD=X",
+      "score": 1.3499999999999999
+    }
+  },
+  "output_paths": {
+    "run_root": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/feature_observability_audit/run_20260718_154326",
+    "tables": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/feature_observability_audit/run_20260718_154326/tables",
+    "diagnostics": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/feature_observability_audit/run_20260718_154326/diagnostics",
+    "corrected_feature_matrix_parquet": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/feature_observability_audit/run_20260718_154326/corrected_feature_matrix/AURORA_TWETF_features_with_labels_observability_corrected.parquet",
+    "corrected_feature_matrix_csv": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/feature_observability_audit/run_20260718_154326/corrected_feature_matrix/AURORA_TWETF_features_with_labels_observability_corrected.csv",
+    "table_S41a_summary": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/feature_observability_audit/run_20260718_154326/tables/table_S41a_feature_observability_audit_summary.csv",
+    "table_S41b_column_audit": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/feature_observability_audit/run_20260718_154326/tables/table_S41b_feature_column_lag_audit.csv",
+    "table_S41c_empirical_audit": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/feature_observability_audit/run_20260718_154326/tables/table_S41c_empirical_source_match_audit.csv",
+    "table_S41d_rows_changed": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/feature_observability_audit/run_20260718_154326/tables/table_S41d_rows_changed_after_correction.csv",
+    "table_S41f_status": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/feature_observability_audit/run_20260718_154326/tables/table_S41f_observability_status_for_manuscript.csv"
+  },
+  "limitations": "The audit verifies definite timestamp-lag problems when feature names, feature metadata, or empirical raw-source matching identify effective lags. Columns without source/lag metadata and without exact empirical source matches are reported as ambiguous; they require feature-construction metadata or Notebook 01/02 inspection for full proof."
+}

@@ -1,0 +1,41 @@
+{
+  "project_code": "AURORA_TWETF",
+  "notebook": "22_revised_cash_return_risk_free_sensitivity",
+  "run_timestamp_utc": "2026-07-22T13:35:03Z",
+  "run_id": "20260722_133503",
+  "cash_rate_scenarios": [
+    {
+      "scenario": "zero_cash_return",
+      "annual_cash_return": 0.0,
+      "annual_risk_free_rate": 0.0
+    },
+    {
+      "scenario": "low_cash_yield_1pct",
+      "annual_cash_return": 0.01,
+      "annual_risk_free_rate": 0.01
+    },
+    {
+      "scenario": "mid_cash_yield_1p5pct",
+      "annual_cash_return": 0.015,
+      "annual_risk_free_rate": 0.015
+    },
+    {
+      "scenario": "higher_cash_yield_2pct",
+      "annual_cash_return": 0.02,
+      "annual_risk_free_rate": 0.02
+    }
+  ],
+  "include_source_aware_cash_sensitivity": false,
+  "valid_strategy_rows_only": [
+    "Original dynamic AURORA",
+    "Ex post constant-lambda AURORA",
+    "Ex post no-probability constant-lambda AURORA"
+  ],
+  "outputs": {
+    "table_S46": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/equivalence_lambda_cash_sensitivity/run_20260722_133503/tables/table_S46_cash_return_risk_free_sensitivity.csv",
+    "table_S46b": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/equivalence_lambda_cash_sensitivity/run_20260722_133503/tables/table_S46b_cash_return_sensitivity_summary.csv"
+  },
+  "warnings": [
+    "Source-aware cash-return sensitivity skipped by design because exact source-aware cash-weight files were not used. Only valid Notebook18 dynamic/constant-lambda diagnostic strategies are reported."
+  ]
+}

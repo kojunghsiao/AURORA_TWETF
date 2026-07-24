@@ -1,0 +1,106 @@
+{
+  "project_code": "AURORA_TWETF",
+  "notebook": "17_AURORA_defensive_controls_and_cash_cap_sensitivity_single_cell",
+  "run_timestamp_utc": "2026-07-14T16:19:27Z",
+  "run_id": "20260714_161927",
+  "purpose": "Defensive-control and cash-cap sensitivity experiments to test whether AURORA10-UAMV-B provides value beyond simple cash exposure, no-forecast probability controls, volatility targeting, and drawdown control.",
+  "input_paths": {
+    "etf_return_panel": "/content/drive/MyDrive/AURORA_TWETF/data/panels/AURORA_etf_return_panel.parquet",
+    "notebook08_or_allocation_input_index": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/NOTEBOOK08_OR_ALLOCATION_INPUT_INDEX_PURGED_WF.csv",
+    "probability_20d_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/probabilities/selected_probabilities_TAIEX_regime_fixed_20d_E1_validation_weighted_probability_ensemble.parquet",
+    "probability_60d_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/probabilities/selected_probabilities_TAIEX_regime_fixed_60d_E1_validation_weighted_probability_ensemble.parquet"
+  },
+  "strict_test_period": {
+    "start": "2024-11-27",
+    "end": "2026-03-25",
+    "n_days": 319,
+    "actual_start": "2024-11-27",
+    "actual_end": "2026-03-25"
+  },
+  "controls": {
+    "cash_cap_sensitivity": [
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "uniform_probability": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "class_prior_source": "pre_strict_oos_validation_test_dates",
+    "p20_class_prior": [
+      0.04868445866882918,
+      0.19516269233489872,
+      0.3927816659643181,
+      0.3205806391973538,
+      0.04279054383460014
+    ],
+    "p60_class_prior": [
+      0.03668782909954942,
+      0.12312755621042926,
+      0.36240720879229504,
+      0.3640712460163345,
+      0.11370615988139182
+    ],
+    "static_baselines": [
+      "40% equity / 60% cash",
+      "50% equity / 50% cash",
+      "44.35% equity / 55.65% cash"
+    ],
+    "volatility_target": {
+      "target_source": "AURORA cash cap 60%",
+      "target_annual_vol": 0.10372989778390321,
+      "lookback": 20
+    },
+    "drawdown_control": {
+      "warning_level": -0.05,
+      "defensive_level": -0.1
+    }
+  },
+  "bootstrap": {
+    "replications": 5000,
+    "block_length": 20,
+    "random_seed": 20260714,
+    "ci_type": "percentile",
+    "bootstrap_type": "paired circular block bootstrap"
+  },
+  "base_config": {
+    "strategy_name": "UAMV_B_more60_defensive",
+    "alpha_20d": 0.3,
+    "alpha_60d": 0.7,
+    "lookback_mu": 63,
+    "lookback_cov": 126,
+    "mean_shrinkage_to_zero": 0.6,
+    "momentum_weight": 0.4,
+    "base_risk_aversion": 10.0,
+    "uncertainty_risk_multiplier": 2.5,
+    "bearish_risk_multiplier": 2.0,
+    "turnover_penalty": 0.25,
+    "regime_tilt_strength": 0.25,
+    "max_etf_weight": 0.45,
+    "max_00881_weight": 0.3,
+    "max_cash_weight": 0.6,
+    "min_cash_weight": 0.0,
+    "risk_aversion_mode": "dynamic",
+    "constant_average_U": null,
+    "constant_average_B": null
+  },
+  "has_scipy_optimizer": true,
+  "output_paths": {
+    "run_root": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_defensive_controls_cash_cap_sensitivity/run_20260714_161927",
+    "tables": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_defensive_controls_cash_cap_sensitivity/run_20260714_161927/tables",
+    "returns": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_defensive_controls_cash_cap_sensitivity/run_20260714_161927/returns",
+    "weights": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_defensive_controls_cash_cap_sensitivity/run_20260714_161927/weights",
+    "diagnostics": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_defensive_controls_cash_cap_sensitivity/run_20260714_161927/diagnostics",
+    "plots": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_defensive_controls_cash_cap_sensitivity/run_20260714_161927/plots",
+    "table_S31": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_defensive_controls_cash_cap_sensitivity/run_20260714_161927/tables/table_S31_defensive_control_performance.csv",
+    "table_S32": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_defensive_controls_cash_cap_sensitivity/run_20260714_161927/tables/table_S32_defensive_control_bootstrap.csv",
+    "table_S33": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_defensive_controls_cash_cap_sensitivity/run_20260714_161927/tables/table_S33_cash_cap_sensitivity.csv",
+    "table_S34": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_defensive_controls_cash_cap_sensitivity/run_20260714_161927/tables/table_S34_defensive_exposure_diagnostics.csv"
+  },
+  "educational_note": "This notebook performs research backtests only and does not provide personalized financial advice."
+}

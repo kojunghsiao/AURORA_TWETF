@@ -1,0 +1,48 @@
+{
+  "project_code": "ROMA_AURORA_TWETF",
+  "notebook": "13B_ROMA_AURORA_source_aware_unified_comparison.ipynb",
+  "run_timestamp_utc": "2026-06-25T06:59:16Z",
+  "run_id": "20260625_065916",
+  "purpose": "Fix Notebook 13 benchmark-name collision by preserving source-specific ROMA_ and AURORA_ benchmark columns, then regenerate final paper tables, figures, and manuscript assets.",
+  "input_paths": {
+    "notebook13_input_index": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/statistical_significance_block_bootstrap/run_20260625_031440/NOTEBOOK13_ROMA_AURORA_INPUT_INDEX.csv",
+    "roma_test_matrix": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/statistical_significance_block_bootstrap/run_20260625_031440/returns/roma_R3_strict_test_return_matrix.parquet",
+    "aurora_test_matrix": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/statistical_significance_block_bootstrap/run_20260625_031440/returns/aurora_N10_strict_test_return_matrix_loaded_in_R3.parquet",
+    "roma_decision_table": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/statistical_significance_block_bootstrap/run_20260625_031440/tables/roma_R3_paper_decision_table.csv",
+    "roma_bootstrap_summary": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/statistical_significance_block_bootstrap/run_20260625_031440/tables/roma_R3_primary_block_bootstrap_summary.csv"
+  },
+  "source_aware_design": {
+    "roma_benchmarks_prefixed": "ROMA_",
+    "aurora_benchmarks_prefixed": "AURORA_",
+    "roma_policies_preserved": true,
+    "aurora_policies_preserved": true,
+    "same_named_benchmarks_merged": false
+  },
+  "primary_policies": {
+    "primary_aurora_policy": "AURORA10_UAMV_B_more60_defensive",
+    "primary_roma_policy": "ROMA_P4_balanced_regime_blend",
+    "primary_roma_timing_benchmark": "ROMA_B12_ma_timing_equal_weight"
+  },
+  "strict_test_period": {
+    "n_days": 319,
+    "start_date": "2024-11-27",
+    "end_date": "2026-03-25"
+  },
+  "main_conclusion": "ROMA-P4 does not statistically outperform its own ROMA-B12 timing benchmark. AURORA10-UAMV-B significantly improves Sharpe, Sortino, and maximum-drawdown behavior relative to ROMA-P4, while total-return superiority is not statistically significant. AURORA should be interpreted as a downside-risk control layer rather than a total-return-maximizing strategy.",
+  "claim_boundary": [
+    "Supported: source-specific benchmarks must be preserved.",
+    "Supported: ROMA does not statistically beat ROMA-B12.",
+    "Supported: AURORA10-UAMV-B significantly improves risk-adjusted and downside-risk behavior versus ROMA-P4.",
+    "Not supported: total-return dominance over all benchmarks.",
+    "Not supported: guaranteed future investment performance."
+  ],
+  "output_paths": {
+    "run_root": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916",
+    "tables": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/tables",
+    "returns": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/returns",
+    "figures": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/paper_figures",
+    "manuscript_assets": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/manuscript_assets",
+    "reports": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/reports"
+  },
+  "educational_note": "This notebook is for reproducible financial machine-learning research only. It does not provide personalized financial advice or performance guarantees."
+}

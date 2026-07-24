@@ -1,0 +1,87 @@
+{
+  "project_code": "ROMA_AURORA_TWETF",
+  "notebook": "14_AURORA_transaction_cost_and_rebalance_sensitivity.ipynb",
+  "run_timestamp_utc": "2026-06-26T00:15:58Z",
+  "run_id": "20260626_001558",
+  "purpose": "Robustness analysis for transaction costs and rebalance frequency. Tests whether AURORA10-UAMV-B risk-control conclusions are sensitive to implementation assumptions.",
+  "input_paths": {
+    "notebook13B_matrix": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/returns/notebook13B_source_aware_strict_test_return_matrix.parquet",
+    "aurora_weights_path": null,
+    "roma_weights_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_TWETF/aligned_allocation_backtest/run_20260625_025314/weights/roma_R2_all_weights.parquet",
+    "etf_return_panel_path": "/content/drive/MyDrive/AURORA_TWETF/data/panels/AURORA_etf_return_panel.parquet"
+  },
+  "primary_sensitivity_source": "approx_return_series_transformation",
+  "transaction_cost_bps_grid": [
+    0,
+    10,
+    25,
+    50
+  ],
+  "rebalance_frequencies": [
+    "daily",
+    "weekly",
+    "monthly",
+    "quarterly"
+  ],
+  "primary_method": "AURORA10_UAMV_B_more60_defensive",
+  "primary_baseline": "ROMA_P4_balanced_regime_blend",
+  "strict_test_period": {
+    "n_days": 319,
+    "start_date": "2024-11-27",
+    "end_date": "2026-03-25"
+  },
+  "claim_stability_summary": [
+    {
+      "claim_indicator": "aurora_sharpe_gt_roma",
+      "n_scenarios_available": 16,
+      "n_true": 13,
+      "share_true": 0.8125
+    },
+    {
+      "claim_indicator": "aurora_sortino_gt_roma",
+      "n_scenarios_available": 16,
+      "n_true": 8,
+      "share_true": 0.5
+    },
+    {
+      "claim_indicator": "aurora_mdd_less_severe_than_roma",
+      "n_scenarios_available": 16,
+      "n_true": 15,
+      "share_true": 0.9375
+    },
+    {
+      "claim_indicator": "aurora_total_return_gt_roma",
+      "n_scenarios_available": 16,
+      "n_true": 0,
+      "share_true": 0.0
+    },
+    {
+      "claim_indicator": "roma_sharpe_gt_b12",
+      "n_scenarios_available": 16,
+      "n_true": 0,
+      "share_true": 0.0
+    },
+    {
+      "claim_indicator": "roma_mdd_less_severe_than_b12",
+      "n_scenarios_available": 16,
+      "n_true": 0,
+      "share_true": 0.0
+    },
+    {
+      "claim_indicator": "roma_total_return_gt_b12",
+      "n_scenarios_available": 16,
+      "n_true": 0,
+      "share_true": 0.0
+    }
+  ],
+  "interpretation": "The robustness analysis should be used to test fragility of the main claim, not to select a new best strategy on the strict-test period. The paper-safe claim remains downside-risk and risk-adjusted robustness, not total-return dominance.",
+  "output_paths": {
+    "run_root": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/transaction_cost_rebalance_sensitivity/run_20260626_001558",
+    "tables": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/transaction_cost_rebalance_sensitivity/run_20260626_001558/tables",
+    "returns": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/transaction_cost_rebalance_sensitivity/run_20260626_001558/returns",
+    "figures": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/transaction_cost_rebalance_sensitivity/run_20260626_001558/paper_figures",
+    "reports": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/transaction_cost_rebalance_sensitivity/run_20260626_001558/reports",
+    "manuscript_assets": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/transaction_cost_rebalance_sensitivity/run_20260626_001558/manuscript_assets"
+  },
+  "educational_note": "This notebook is for reproducible financial machine-learning research only. It does not provide personalized financial advice or performance guarantees."
+}

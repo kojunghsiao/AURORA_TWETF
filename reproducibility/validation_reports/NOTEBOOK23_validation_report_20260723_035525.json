@@ -1,0 +1,45 @@
+{
+  "project_code": "AURORA_TWETF",
+  "notebook_filename": "23_canonical_passive_benchmark_reconciliation.ipynb",
+  "run_timestamp_utc": "2026-07-23T03:55:25Z",
+  "run_id": "20260723_035525",
+  "purpose": "Construct canonical passive benchmarks and reconcile source-aware passive rows using strict exact matching that prevents B1/B12 confusion.",
+  "strict_window": {
+    "strict_start": "2024-11-27",
+    "strict_end": "2026-03-25",
+    "n_canonical_dates": 319,
+    "canonical_start": "2024-11-27",
+    "canonical_end": "2026-03-25"
+  },
+  "settings": {
+    "annualization_days": 252,
+    "transaction_cost_bps": 10,
+    "equal_weight_rebalance": "month_end",
+    "apply_transaction_cost_to_equal_weight_rebalance": true,
+    "cash_return": 0.0,
+    "price_convention": "Adjusted close when available; close otherwise",
+    "passive_reconciliation_matching": "Exact and normalized-exact matching only. No substring matching. Columns containing timing/B12 terms are blocked for passive reconciliation."
+  },
+  "inputs": {
+    "raw_yfinance_dir": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance",
+    "raw_etf_files": {
+      "0050": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/0050_0050_TW.csv",
+      "006208": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/006208_006208_TW.csv",
+      "00692": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/00692_00692_TW.csv",
+      "00881": "/content/drive/MyDrive/AURORA_TWETF/data/raw_yfinance/00881_00881_TW.csv"
+    },
+    "source_aware_return_matrix": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/returns/notebook13B_source_aware_strict_test_return_matrix.csv"
+  },
+  "outputs": {
+    "table_S28": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/canonical_passive_benchmarks/run_20260723_035525/tables/table_S28_canonical_passive_benchmark_performance.csv",
+    "table_S29": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/canonical_passive_benchmarks/run_20260723_035525/tables/table_S29_source_aware_vs_canonical_passive_reconciliation.csv",
+    "table_S29b": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/canonical_passive_benchmarks/run_20260723_035525/tables/table_S29b_source_aware_passive_reconciliation_skipped.csv",
+    "table_S29c": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/canonical_passive_benchmarks/run_20260723_035525/tables/table_S29c_source_aware_return_matrix_column_inventory.csv",
+    "table_S30": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/canonical_passive_benchmarks/run_20260723_035525/tables/table_S30_canonical_passive_benchmark_design.csv",
+    "canonical_return_matrix_csv": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/canonical_passive_benchmarks/run_20260723_035525/returns/canonical_passive_strict_test_return_matrix.csv",
+    "canonical_return_matrix_parquet": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/canonical_passive_benchmarks/run_20260723_035525/returns/canonical_passive_strict_test_return_matrix.parquet"
+  },
+  "recommended_manuscript_use": "Use canonical passive series for 0050-only, 00881-only, and equal-weight ETF benchmarks. Retain source-aware labels only for materially different timing rules such as ROMA-B12 and AURORA-B12.",
+  "valid_reconciliation_rows": 4,
+  "skipped_reconciliation_rows": 2
+}

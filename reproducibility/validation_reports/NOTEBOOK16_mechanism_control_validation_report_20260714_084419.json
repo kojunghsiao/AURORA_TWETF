@@ -1,0 +1,92 @@
+{
+  "project_code": "AURORA_TWETF",
+  "notebook": "16_AURORA_mechanism_control_experiments_corrected_single_cell",
+  "run_timestamp_utc": "2026-07-14T08:44:19Z",
+  "run_id": "20260714_084419",
+  "purpose": "Mechanism-control experiments to test whether AURORA10-UAMV-B's downside-risk behavior is explained by dynamic uncertainty-aware allocation beyond static cash exposure, constant-average uncertainty risk aversion, simple probability blending, and shuffled probabilities.",
+  "input_paths": {
+    "etf_return_panel": "/content/drive/MyDrive/AURORA_TWETF/data/panels/AURORA_etf_return_panel.parquet",
+    "notebook08_or_allocation_input_index": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/NOTEBOOK08_OR_ALLOCATION_INPUT_INDEX_PURGED_WF.csv",
+    "probability_20d_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/probabilities/selected_probabilities_TAIEX_regime_fixed_20d_E1_validation_weighted_probability_ensemble.parquet",
+    "probability_60d_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/probabilities/selected_probabilities_TAIEX_regime_fixed_60d_E1_validation_weighted_probability_ensemble.parquet"
+  },
+  "strict_test_period": {
+    "start": "2024-11-27",
+    "end": "2026-03-25",
+    "n_days": 319,
+    "actual_start": "2024-11-27",
+    "actual_end": "2026-03-25"
+  },
+  "mechanism_controls": {
+    "static_exposure_matched_weights": {
+      "0050": 0.110875,
+      "006208": 0.110875,
+      "00692": 0.110875,
+      "00881": 0.110875,
+      "CASH": 0.5565
+    },
+    "constant_average_U": 0.8144304695727809,
+    "constant_average_B": 0.18502491501810342,
+    "constant_average_source": "pre_strict_oos_validation_test_dates",
+    "probability_blend_controls": [
+      "20d-only",
+      "60d-only",
+      "equal-blend",
+      "original 30/70 blend"
+    ],
+    "shuffled_probability_seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009
+    ]
+  },
+  "bootstrap": {
+    "replications": 5000,
+    "block_length": 20,
+    "random_seed": 20260714,
+    "ci_type": "percentile",
+    "bootstrap_type": "paired circular block bootstrap"
+  },
+  "base_config": {
+    "strategy_name": "UAMV_B_more60_defensive",
+    "alpha_20d": 0.3,
+    "alpha_60d": 0.7,
+    "lookback_mu": 63,
+    "lookback_cov": 126,
+    "mean_shrinkage_to_zero": 0.6,
+    "momentum_weight": 0.4,
+    "base_risk_aversion": 10.0,
+    "uncertainty_risk_multiplier": 2.5,
+    "bearish_risk_multiplier": 2.0,
+    "turnover_penalty": 0.25,
+    "regime_tilt_strength": 0.25,
+    "max_etf_weight": 0.45,
+    "max_00881_weight": 0.3,
+    "max_cash_weight": 0.6,
+    "min_cash_weight": 0.0,
+    "risk_aversion_mode": "dynamic",
+    "constant_average_U": null,
+    "constant_average_B": null
+  },
+  "has_scipy_optimizer": true,
+  "output_paths": {
+    "run_root": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_mechanism_controls/run_20260714_084419",
+    "tables": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_mechanism_controls/run_20260714_084419/tables",
+    "returns": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_mechanism_controls/run_20260714_084419/returns",
+    "weights": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_mechanism_controls/run_20260714_084419/weights",
+    "diagnostics": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_mechanism_controls/run_20260714_084419/diagnostics",
+    "plots": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_mechanism_controls/run_20260714_084419/plots",
+    "table_S27": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_mechanism_controls/run_20260714_084419/tables/table_S27_mechanism_control_performance.csv",
+    "table_S28": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_mechanism_controls/run_20260714_084419/tables/table_S28_mechanism_control_bootstrap.csv",
+    "table_S29": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_mechanism_controls/run_20260714_084419/tables/table_S29_probability_control_diagnostics.csv",
+    "table_S30": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_mechanism_controls/run_20260714_084419/tables/table_S30_exposure_control_diagnostics.csv"
+  },
+  "educational_note": "This notebook performs research backtests only and does not provide personalized financial advice."
+}

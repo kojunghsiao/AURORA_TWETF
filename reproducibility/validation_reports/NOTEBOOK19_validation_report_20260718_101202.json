@@ -1,0 +1,66 @@
+{
+  "project_code": "AURORA_TWETF",
+  "notebook": "19_AURORA_probability_skill_observability_bootstrap_sensitivity_corrected",
+  "run_timestamp_utc": "2026-07-18T10:12:02Z",
+  "run_id": "20260718_101202",
+  "purpose": "Generate supplementary diagnostics for probability-skill baselines, feature observability convention, and bootstrap block-length sensitivity.",
+  "input_paths": {
+    "notebook08_or_allocation_input_index": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/NOTEBOOK08_OR_ALLOCATION_INPUT_INDEX_PURGED_WF.csv",
+    "probability_20d_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/probabilities/selected_probabilities_TAIEX_regime_fixed_20d_E1_validation_weighted_probability_ensemble.parquet",
+    "probability_60d_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/probabilities/selected_probabilities_TAIEX_regime_fixed_60d_E1_validation_weighted_probability_ensemble.parquet",
+    "manual_source_aware_return_matrix_path": null,
+    "manual_notebook18_returns_path": null
+  },
+  "label_sources": {
+    "20d": "modeling_dataset:/content/drive/MyDrive/AURORA_TWETF/data/modeling/AURORA_TWETF_features_with_labels.csv",
+    "60d": "modeling_dataset:/content/drive/MyDrive/AURORA_TWETF/data/modeling/AURORA_TWETF_features_with_labels.csv"
+  },
+  "strict_test_period": {
+    "start": "2024-11-27",
+    "end": "2026-03-25",
+    "common_probability_dates": 319
+  },
+  "probability_skill": {
+    "class_labels": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "random_baseline_replications": 1000,
+    "random_baseline_seed": 20260718,
+    "table_S25b_rows": 4
+  },
+  "feature_observability_note": "Table S41 documents the intended leakage-safe convention. It does not by itself prove that the feature-construction notebook applied every lag. To verify implementation, inspect the raw data and feature-construction notebooks.",
+  "bootstrap_block_length_sensitivity": {
+    "replications": 5000,
+    "block_lengths": [
+      5,
+      10,
+      20,
+      40,
+      60
+    ],
+    "random_seed": 20260718,
+    "ci_type": "percentile",
+    "bootstrap_type": "paired circular block bootstrap",
+    "comparisons_generated": [
+      "AURORA10-UAMV-B vs ROMA-P4",
+      "Original dynamic AURORA vs exposure-matched constant-lambda AURORA"
+    ],
+    "table_S42_rows": 40
+  },
+  "output_paths": {
+    "run_root": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_skill_observability_bootstrap_sensitivity/run_20260718_101202",
+    "tables": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_skill_observability_bootstrap_sensitivity/run_20260718_101202/tables",
+    "diagnostics": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_skill_observability_bootstrap_sensitivity/run_20260718_101202/diagnostics",
+    "reports": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_skill_observability_bootstrap_sensitivity/run_20260718_101202/reports",
+    "table_S25b": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_skill_observability_bootstrap_sensitivity/run_20260718_101202/tables/table_S25b_probability_skill_baselines.csv",
+    "table_S41": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_skill_observability_bootstrap_sensitivity/run_20260718_101202/tables/table_S41_feature_observability_lag_convention.csv",
+    "table_S42": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_skill_observability_bootstrap_sensitivity/run_20260718_101202/tables/table_S42_bootstrap_block_length_sensitivity.csv",
+    "table_S42b": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_skill_observability_bootstrap_sensitivity/run_20260718_101202/tables/table_S42b_bootstrap_block_length_summary.csv",
+    "interpretation_helper": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_skill_observability_bootstrap_sensitivity/run_20260718_101202/tables/notebook19_interpretation_helper.csv"
+  },
+  "educational_note": "This notebook performs research diagnostics only and does not provide personalized financial advice."
+}
