@@ -1,86 +1,16 @@
-# AURORA-TWETF: Forecast-to-Allocation Diagnostics for Taiwan ETF Portfolios
+# Reproducibility Folder
 
-This repository contains the reproducibility package for the manuscript:
+This folder contains machine-readable files used to audit the AURORA-TWETF reproducibility package.
 
-**Diagnosing forecast-to-allocation effects in Taiwan ETF portfolios: cash exposure, uncertainty-aware allocation, and downside-risk control**
+## Files
 
-Authors: Ko-Jung Hsiao and Chien-Chih Hsiao  
-Affiliation: Department of Electrical Engineering, Yuan Ze University, Taiwan
+- OUTPUT_MANIFEST.csv: lists repository files and output files with relative paths, sizes, modification times, and SHA256 hashes.
+- pipeline_metadata_AURORA_TWETF.csv: documents operational differences among the main source-aware comparison, mechanism-control diagnostics, constant-lambda attribution, pre-evaluation reconstruction, cash-return sensitivity, canonical passive benchmarks, and feature-observability audit pipelines.
+- random_seeds.md: summarizes random seeds and deterministic components.
+- validation_reports/: contains notebook-generated validation reports where available.
 
-Repository DOI / permanent URL: **[insert Zenodo DOI or permanent repository URL]**
+## Notes
 
----
+The manuscript uses “aligned out-of-sample evaluation window” for the main 319-trading-day evaluation period from 2024-11-27 to 2026-03-25. Some repository outputs use the label “strict-test” for the same evaluation period.
 
-## 1. Project overview
-
-AURORA-TWETF is a diagnostic research framework for studying how noisy regime-probability forecasts are transformed into ETF and cash portfolio weights.
-
-The empirical study focuses on semiconductor-sensitive Taiwan ETF allocation using four Taiwan ETFs:
-
-- 0050
-- 006208
-- 00692
-- 00881
-- cash
-
-The main conclusion is diagnostic rather than prescriptive:
-
-> The selected AURORA specification improves Sharpe, Sortino, and maximum-drawdown behavior relative to the ROMA-P4 baseline in the aligned out-of-sample evaluation window, but mechanism-control, defensive-control, constant-lambda, equivalence, and cash-return diagnostics show that the observed downside-risk behavior is driven mainly by persistent cash exposure, cash-cap binding, and elevated effective risk aversion rather than separable dynamic probability-timing value.
-
-This repository is provided for reproducibility and reviewer audit. It is **not financial advice** and does not provide investment recommendations.
-
----
-
-## 2. What this repository contains
-
-This repository contains:
-
-- data-download and preprocessing notebooks;
-- feature and label construction notebooks;
-- purged walk-forward forecasting notebooks;
-- AURORA allocation notebooks;
-- ROMA baseline and source-aware comparison notebooks;
-- bootstrap inference and implementation-sensitivity notebooks;
-- mechanism-control, defensive-control, and constant-lambda attribution notebooks;
-- probability-skill baseline diagnostics;
-- feature-observability audit outputs;
-- canonical passive benchmark construction;
-- cash-return and nonzero-risk-free-rate sensitivity;
-- processed tables, figures, return matrices, weights, reports, and metadata.
-
-Raw market data are downloaded from public yfinance-accessible sources by the data-ingestion notebooks and are not redistributed unless permitted by the original providers.
-
----
-
-## 3. Repository structure
-
-```text
-AURORA_TWETF/
-├── README.md
-├── EXECUTION_ORDER.md
-├── ENVIRONMENT.md
-├── requirements.txt
-├── requirements_project_versions.txt
-├── requirements_colab_full.txt
-│
-├── notebooks/
-│   └── all Colab notebooks
-│
-├── outputs/
-│   └── AURORA_TWETF/
-│       ├── canonical_passive_benchmarks/
-│       │   └── run_20260723_035525/
-│       ├── equivalence_lambda_cash_sensitivity/
-│       │   └── run_20260722_133503/
-│       ├── tables/
-│       ├── figures/
-│       ├── reports/
-│       ├── returns/
-│       ├── weights/
-│       └── diagnostics/
-│
-└── reproducibility/
-    ├── OUTPUT_MANIFEST.csv
-    ├── pipeline_metadata_AURORA_TWETF.csv
-    ├── random_seeds.md
-    └── validation_reports/
+The diagnostic pipelines are not interchangeable with the main source-aware comparison. See pipeline_metadata_AURORA_TWETF.csv for claim use and pipeline-specific assumptions.
