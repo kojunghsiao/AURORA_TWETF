@@ -7,7 +7,7 @@ This repository contains the reproducibility package for the manuscript:
 Authors: Ko-Jung Hsiao and Chien-Chih Hsiao  
 Affiliation: Department of Electrical Engineering, Yuan Ze University, Taiwan
 
-Repository DOI / permanent URL: **[insert Zenodo DOI or permanent repository URL]**
+Repository DOI / permanent URL: **Hsiao, K.-J. & Hsiao, C.-C. AURORA-TWETF reproducibility package v1.0.1. Zenodo. https://doi.org/10.5281/zenodo.21535796 (2026).**
 
 ---
 
