@@ -2,7 +2,8 @@
 
 This repository contains the reproducibility package for the manuscript:
 
-**Diagnosing forecast-to-allocation effects in Taiwan ETF portfolios: cash exposure, uncertainty-aware allocation, and downside-risk control**
+**Diagnosing forecast-to-allocation attribution in Taiwan ETF portfolios: cash exposure, risk aversion, and downside-risk control**
+
 
 Authors: Ko-Jung Hsiao and Chien-Chih Hsiao  
 Affiliation: Department of Electrical Engineering, Yuan Ze University, Taiwan
