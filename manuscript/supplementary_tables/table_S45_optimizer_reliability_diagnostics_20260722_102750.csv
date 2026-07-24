@@ -1,0 +1,10 @@
+diagnostic_source,rebalance_dates_evaluated,successful_optimizer_solves,solver_success_rate,fallback_allocations,fallback_rate,mean_equality_residual_abs,max_equality_residual_abs,maximum_bound_violation,fraction_days_at_cash_cap,fraction_days_at_00881_cap,fraction_days_at_any_etf_cap,average_turnover
+Notebook18 all_notebook18_diagnostics,2552,,,,,,,,,,,
+Notebook18 diagnostics: Exposure-matched constant-lambda AURORA,319,,,,,,,,,,,
+Notebook18 diagnostics: Exposure-matched constant-lambda no-probability AURORA,319,,,,,,,,,,,
+Notebook18 diagnostics: Original dynamic AURORA,319,,,,,,,,,,,
+Notebook18 diagnostics: Reduced-universe: Full universe,319,,,,,,,,,,,
+Notebook18 diagnostics: Reduced-universe: Remove 0050,319,,,,,,,,,,,
+Notebook18 diagnostics: Reduced-universe: Remove 006208,319,,,,,,,,,,,
+Notebook18 diagnostics: Reduced-universe: Synthetic Taiwan 50 sleeve,319,,,,,,,,,,,
+Notebook18 diagnostics: Static exposure-matched cash baseline,319,,,,,,,,,,,

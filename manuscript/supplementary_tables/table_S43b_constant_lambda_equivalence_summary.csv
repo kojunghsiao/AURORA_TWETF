@@ -1,0 +1,3 @@
+comparison,metrics_tested,metrics_equivalent,all_tested_metrics_equivalent,equivalence_results
+Dynamic vs ex post constant-lambda,6,6,True,total_return:Equivalent within margin; sharpe:Equivalent within margin; sortino:Equivalent within margin; max_drawdown:Equivalent within margin; avg_cash:Equivalent within margin; cash_cap_binding:Equivalent within margin
+Dynamic vs ex post no-probability constant-lambda,6,6,True,total_return:Equivalent within margin; sharpe:Equivalent within margin; sortino:Equivalent within margin; max_drawdown:Equivalent within margin; avg_cash:Equivalent within margin; cash_cap_binding:Equivalent within margin

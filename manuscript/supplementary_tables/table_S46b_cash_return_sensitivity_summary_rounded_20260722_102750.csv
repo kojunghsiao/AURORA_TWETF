@@ -1,0 +1,7 @@
+strategy_control,avg_cash_weight,base_total_return_zero_cash,highest_cash_scenario_total_return,total_return_change_highest_minus_base,base_sharpe_zero_rf,highest_cash_scenario_sharpe_nonzero_rf,interpretation
+AURORA10-UAMV-B source-aware,0.555935,12.269564,13.832961,1.563398,2.26377,2.187811,Higher cash yield benefits strategies with higher cash weights; nonzero RF reduces excess-return Sharpe.
+Ex post constant-lambda AURORA,0.556498,0.242516,0.259959,0.017444,1.699921,1.615591,Higher cash yield benefits strategies with higher cash weights; nonzero RF reduces excess-return Sharpe.
+Ex post no-probability constant-lambda AURORA,0.5565,0.242492,0.259935,0.017443,1.699822,1.61549,Higher cash yield benefits strategies with higher cash weights; nonzero RF reduces excess-return Sharpe.
+Original dynamic AURORA,0.556516,0.242284,0.259725,0.017441,1.698817,1.614474,Higher cash yield benefits strategies with higher cash weights; nonzero RF reduces excess-return Sharpe.
+ROMA-B12 source-aware,0.555935,54.537431,61.076945,6.539514,2.308424,2.259239,Higher cash yield benefits strategies with higher cash weights; nonzero RF reduces excess-return Sharpe.
+ROMA-P4 source-aware,0.555935,28.103415,31.531373,3.427958,1.690922,1.649044,Higher cash yield benefits strategies with higher cash weights; nonzero RF reduces excess-return Sharpe.

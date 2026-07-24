@@ -1,0 +1,13 @@
+comparison,metric,observed_difference,ci95_lower,ci95_upper,equivalence_margin,equivalence_result,bootstrap_replications,block_length,n_days
+Dynamic vs ex post constant-lambda,total_return,-0.00023168124142936009,-0.0005968456294628222,5.8118332611184365e-05,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post constant-lambda,sharpe,-0.0011044252532188548,-0.0030477366618573308,0.0007264910744559031,0.05,Equivalent within margin,5000,20,319
+Dynamic vs ex post constant-lambda,sortino,-0.0018027315910571495,-0.005299819261949468,0.0008591273841583075,0.1,Equivalent within margin,5000,20,319
+Dynamic vs ex post constant-lambda,max_drawdown,-8.103288361094307e-06,-0.00014517130774363007,2.8312851423631345e-05,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post constant-lambda,avg_cash,1.799902161705051e-05,-4.9651686542350716e-05,0.00010139607870550476,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post constant-lambda,cash_cap_binding,0.0,0.0,0.0,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,total_return,-0.00020777755701284484,-0.0005278363956757514,5.033645732735426e-05,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,sharpe,-0.0010049472124782355,-0.0026726756819818896,0.0006139507015419089,0.05,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,sortino,-0.0016724208121532413,-0.0045879139635345845,0.0005818251526073122,0.1,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,max_drawdown,-1.1828993209062055e-05,-0.00013082679527503247,2.8220031829420668e-05,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,avg_cash,1.6646467056323253e-05,-5.133216258086897e-05,9.743457556994456e-05,0.01,Equivalent within margin,5000,20,319
+Dynamic vs ex post no-probability constant-lambda,cash_cap_binding,0.0,0.0,0.0,0.01,Equivalent within margin,5000,20,319

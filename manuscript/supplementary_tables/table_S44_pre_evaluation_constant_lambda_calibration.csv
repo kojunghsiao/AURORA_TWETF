@@ -1,0 +1,2 @@
+status,reason,required_inputs
+failed,ValueError('No close/adjusted-close column found for 0050 in /content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_exposure_matched_lambda_reduced_universe/run_20260717_082548/returns/returns_AURORA18_REDUCED_REMOVE_0050.csv.'),"raw ETF adjusted-close files, Notebook08 probability input index, selected 20d/60d probability files"

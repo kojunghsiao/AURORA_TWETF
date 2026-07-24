@@ -1,0 +1,12 @@
+diagnostic_source,rebalance_dates_evaluated,successful_optimizer_solves,solver_success_rate,fallback_allocations,fallback_rate,mean_equality_residual_abs,max_equality_residual_abs,maximum_bound_violation,fraction_days_at_cash_cap,average_turnover
+Notebook18 diagnostics: Exposure-matched constant-lambda AURORA,319,,,,,,,,,
+Notebook18 diagnostics: Exposure-matched constant-lambda no-probability AURORA,319,,,,,,,,,
+Notebook18 diagnostics: Original dynamic AURORA,319,,,,,,,,,
+Notebook18 diagnostics: Reduced-universe: Full universe,319,,,,,,,,,
+Notebook18 diagnostics: Reduced-universe: Remove 0050,319,,,,,,,,,
+Notebook18 diagnostics: Reduced-universe: Remove 006208,319,,,,,,,,,
+Notebook18 diagnostics: Reduced-universe: Synthetic Taiwan 50 sleeve,319,,,,,,,,,
+Notebook18 diagnostics: Static exposure-matched cash baseline,319,,,,,,,,,
+Notebook21 dynamic AURORA,17,17.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0016308403224918374
+Notebook21 pre-eval constant-lambda 21,17,17.0,1.0,0.0,0.0,6.530723674265627e-18,1.1102230246251565e-16,0.0,1.0,0.0008976371059946977
+Notebook21 pre-eval no-probability constant-lambda 21,17,17.0,1.0,0.0,0.0,6.530723674265627e-18,1.1102230246251565e-16,0.0,1.0,0.0008976371059946977

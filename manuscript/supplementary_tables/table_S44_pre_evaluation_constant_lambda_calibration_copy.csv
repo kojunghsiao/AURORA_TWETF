@@ -1,0 +1,2 @@
+status,calibration_window_start,calibration_window_end,calibration_n_days,strict_test_window_start,strict_test_window_end,strict_test_n_days,dynamic_calibration_avg_cash,selected_pre_evaluation_lambda,cash_match_abs_error,lambda_grid_min,lambda_grid_max,lambda_grid_step,implementation_note
+completed,2024-02-20,2024-11-26,189,2024-11-27,2026-03-25,319,0.5999999999999999,21.0,0.0,0.0,100.0,1.0,Self-contained AURORA-compatible optimizer reconstruction using raw ETF adjusted-close returns and pre-evaluation OOS probabilities.

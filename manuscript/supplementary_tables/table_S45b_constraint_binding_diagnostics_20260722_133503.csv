@@ -1,0 +1,7 @@
+strategy_control,source,n_days,avg_cash,median_cash,fraction_days_at_cash_cap,fraction_days_at_0050_cap,fraction_days_at_006208_cap,fraction_days_at_00692_cap,fraction_days_at_00881_cap,fraction_days_at_any_etf_cap,avg_equity_exposure
+Original dynamic AURORA,Notebook18 weights,319,0.5565162732224096,0.6,0.8746081504702194,0.0,0.0,0.0,0.0,0.0,0.44348372677759035
+Ex post constant-lambda AURORA,Notebook18 weights,319,0.5564982742007926,0.6,0.8746081504702194,0.0,0.0,0.0,0.0,0.0,0.44350172579920744
+Ex post no-probability constant-lambda AURORA,Notebook18 weights,319,0.5564996267553532,0.6,0.8746081504702194,0.0,0.0,0.0,0.0,0.0,0.44350037324464664
+Notebook21 dynamic AURORA,Notebook21 self-contained weights,319,0.6,0.6,1.0,0.0,0.0,0.0,0.0,0.0,0.3999999999999999
+Notebook21 pre-eval constant-lambda 21,Notebook21 self-contained weights,319,0.6,0.6,1.0,0.0,0.0,0.0,0.0,0.0,0.3999999999999999
+Notebook21 pre-eval no-probability constant-lambda 21,Notebook21 self-contained weights,319,0.6,0.6,1.0,0.0,0.0,0.0,0.0,0.0,0.3999999999999999
