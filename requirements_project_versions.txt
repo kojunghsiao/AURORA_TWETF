@@ -1,0 +1,13 @@
+numpy==2.0.2
+pandas==2.2.2
+scipy==1.16.3
+scikit-learn==1.6.1
+matplotlib==3.10.0
+seaborn==0.13.2
+yfinance==0.2.66
+pyarrow==18.1.0
+openpyxl==3.1.5
+joblib==1.5.3
+tqdm==4.67.3
+xgboost==3.3.0
+lightgbm==4.6.0
