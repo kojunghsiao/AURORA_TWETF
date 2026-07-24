@@ -1,0 +1,5 @@
+strategy,benchmark_role,n_days,start_date,end_date,total_return,annual_return,annual_volatility,sharpe,sortino,max_drawdown,calmar,construction,transaction_cost_rate
+Canonical 0050-only,Canonical 0050-only passive benchmark,319,2024-11-27,2026-03-25,0.662272,0.49399,0.247555,1.746624,2.287916,-0.27485,1.79731,Adjusted-close daily return; no rebalancing; zero cash return,0.0
+Canonical 00881-only,Canonical 00881-only passive benchmark,319,2024-11-27,2026-03-25,0.749478,0.555572,0.269484,1.775895,2.25147,-0.300012,1.851831,Adjusted-close daily return; no rebalancing; zero cash return,0.0
+Canonical equal-weight four-ETF,Canonical equal-weight four-ETF passive benchmark,319,2024-11-27,2026-03-25,0.661703,0.493586,0.2494,1.734546,2.240215,-0.278439,1.772688,Equal-weight 0050/006208/00692/00881; month_end rebalanced; transaction cost applied to turnover,0.001
+Canonical equal-weight buy-and-hold diagnostic,Repository diagnostic only,319,2024-11-27,2026-03-25,0.662157,0.493908,0.249464,1.735029,2.241776,-0.278413,1.774013,Initial equal-weight four-ETF buy-and-hold; no rebalancing; zero transaction cost,0.0

@@ -1,0 +1,5 @@
+current_or_source_aware_label,recommended_main_text_label,recommended_return_series,reason
+ROMA-B6 / AURORA-B6,Canonical 00881-only passive benchmark,Canonical 00881-only,00881-only is a passive rule and should not need separate source-aware versions in the main paper.
+ROMA-B3 / AURORA-B3 if used,Canonical 0050-only passive benchmark,Canonical 0050-only,0050-only is a passive rule and should be reported as one aligned canonical series.
+ROMA-B1 / AURORA-B1 if true passive columns exist,Canonical equal-weight four-ETF passive benchmark,Canonical equal-weight four-ETF,Equal-weight passive benchmark should be generated once from a canonical adjusted-close return panel.
+ROMA-B12 and AURORA-B12,Keep source-aware timing labels,Keep separate,"These are materially different timing rules, not passive duplicates."

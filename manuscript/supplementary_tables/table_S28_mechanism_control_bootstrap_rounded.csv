@@ -1,0 +1,25 @@
+comparison,strategy_control,comparator_control,metric,observed_difference,ci95_lower,ci95_upper,result,bootstrap_replications,block_length,ci_type
+AURORA10-UAMV-B original vs Static 44.35% equity / 55.65% cash,AURORA10-UAMV-B original,Static 44.35% equity / 55.65% cash,diff_total_return,-0.021382,-0.075026,0.032425,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Static 44.35% equity / 55.65% cash,AURORA10-UAMV-B original,Static 44.35% equity / 55.65% cash,diff_sharpe,-0.021616,-0.306413,0.196216,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Static 44.35% equity / 55.65% cash,AURORA10-UAMV-B original,Static 44.35% equity / 55.65% cash,diff_sortino,0.041451,-0.577265,0.372986,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Static 44.35% equity / 55.65% cash,AURORA10-UAMV-B original,Static 44.35% equity / 55.65% cash,drawdown_improvement,0.015366,-0.005251,0.023107,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Constant-average uncertainty AURORA,AURORA10-UAMV-B original,Constant-average uncertainty AURORA,diff_total_return,-5e-06,-0.000114,0.000129,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Constant-average uncertainty AURORA,AURORA10-UAMV-B original,Constant-average uncertainty AURORA,diff_sharpe,-4.5e-05,-0.000585,0.000644,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Constant-average uncertainty AURORA,AURORA10-UAMV-B original,Constant-average uncertainty AURORA,diff_sortino,-0.000185,-0.001708,0.000929,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Constant-average uncertainty AURORA,AURORA10-UAMV-B original,Constant-average uncertainty AURORA,drawdown_improvement,-1.2e-05,-3.9e-05,3.3e-05,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs 20d-only AURORA,AURORA10-UAMV-B original,20d-only AURORA,diff_total_return,0.001378,-0.000101,0.00373,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs 20d-only AURORA,AURORA10-UAMV-B original,20d-only AURORA,diff_sharpe,0.003584,-0.011223,0.014977,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs 20d-only AURORA,AURORA10-UAMV-B original,20d-only AURORA,diff_sortino,0.008602,-0.021873,0.02479,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs 20d-only AURORA,AURORA10-UAMV-B original,20d-only AURORA,drawdown_improvement,-6.5e-05,-0.000665,0.000634,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs 60d-only AURORA,AURORA10-UAMV-B original,60d-only AURORA,diff_total_return,-0.001073,-0.002886,6.9e-05,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs 60d-only AURORA,AURORA10-UAMV-B original,60d-only AURORA,diff_sharpe,-0.00255,-0.011526,0.009292,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs 60d-only AURORA,AURORA10-UAMV-B original,60d-only AURORA,diff_sortino,-0.00638,-0.019359,0.02034,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs 60d-only AURORA,AURORA10-UAMV-B original,60d-only AURORA,drawdown_improvement,5.5e-05,-0.000456,0.000602,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Equal-blend AURORA,AURORA10-UAMV-B original,Equal-blend AURORA,diff_total_return,0.000549,-3.3e-05,0.00151,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Equal-blend AURORA,AURORA10-UAMV-B original,Equal-blend AURORA,diff_sharpe,0.001368,-0.004623,0.005843,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Equal-blend AURORA,AURORA10-UAMV-B original,Equal-blend AURORA,diff_sortino,0.003381,-0.009303,0.010055,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Equal-blend AURORA,AURORA10-UAMV-B original,Equal-blend AURORA,drawdown_improvement,-2.6e-05,-0.000312,0.000256,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Shuffled-probability AURORA mean,AURORA10-UAMV-B original,Shuffled-probability AURORA mean,diff_total_return,0.000805,-6.7e-05,0.002233,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Shuffled-probability AURORA mean,AURORA10-UAMV-B original,Shuffled-probability AURORA mean,diff_sharpe,0.002057,-0.006633,0.009244,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Shuffled-probability AURORA mean,AURORA10-UAMV-B original,Shuffled-probability AURORA mean,diff_sortino,0.005015,-0.01409,0.015091,Not significant,5000,20,percentile
+AURORA10-UAMV-B original vs Shuffled-probability AURORA mean,AURORA10-UAMV-B original,Shuffled-probability AURORA mean,drawdown_improvement,-5.4e-05,-0.000418,0.00043,Not significant,5000,20,percentile
