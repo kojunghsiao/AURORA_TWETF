@@ -1,0 +1,9 @@
+comparison,metric,block_length_results,num_significant_positive_blocks,num_significant_negative_blocks,num_not_significant_blocks,significant_positive_block_lengths,significant_negative_block_lengths,not_significant_block_lengths
+AURORA10-UAMV-B vs ROMA-P4,Total return,5:Not significant; 10:Not significant; 20:Not significant; 40:Not significant; 60:Not significant,0,0,5,,,"5,10,20,40,60"
+AURORA10-UAMV-B vs ROMA-P4,Sharpe,5:Significant positive; 10:Significant positive; 20:Significant positive; 40:Significant positive; 60:Significant positive,5,0,0,"5,10,20,40,60",,
+AURORA10-UAMV-B vs ROMA-P4,Sortino,5:Significant positive; 10:Significant positive; 20:Significant positive; 40:Significant positive; 60:Significant positive,5,0,0,"5,10,20,40,60",,
+AURORA10-UAMV-B vs ROMA-P4,Max-drawdown improvement,5:Significant positive; 10:Significant positive; 20:Significant positive; 40:Significant positive; 60:Significant positive,5,0,0,"5,10,20,40,60",,
+Original dynamic AURORA vs exposure-matched constant-lambda AURORA,Total return,5:Not significant; 10:Not significant; 20:Not significant; 40:Not significant; 60:Not significant,0,0,5,,,"5,10,20,40,60"
+Original dynamic AURORA vs exposure-matched constant-lambda AURORA,Sharpe,5:Not significant; 10:Not significant; 20:Not significant; 40:Not significant; 60:Not significant,0,0,5,,,"5,10,20,40,60"
+Original dynamic AURORA vs exposure-matched constant-lambda AURORA,Sortino,5:Not significant; 10:Not significant; 20:Not significant; 40:Not significant; 60:Not significant,0,0,5,,,"5,10,20,40,60"
+Original dynamic AURORA vs exposure-matched constant-lambda AURORA,Max-drawdown improvement,5:Not significant; 10:Not significant; 20:Not significant; 40:Not significant; 60:Not significant,0,0,5,,,"5,10,20,40,60"

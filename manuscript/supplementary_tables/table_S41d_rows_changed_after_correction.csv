@@ -1,0 +1,2 @@
+n_modeling_rows,n_features_with_definite_timestamp_violation,n_ambiguous_external_lag_required_features,shift_ambiguous_external_features,n_features_shifted_in_corrected_copy,n_dates_changed_after_correction,first_changed_date,last_changed_date,correction_policy
+1262,0,0,False,0,0,,,Definite timestamp violations shifted by the minimum additional lag required. Ambiguous external features are shifted only if SHIFT_AMBIGUOUS_EXTERNAL_FEATURES=True.

@@ -1,0 +1,5 @@
+strategy_control,max_cash_weight_config,total_return,annual_return,annual_volatility,sharpe_ratio,sortino_ratio,max_drawdown,calmar_ratio,avg_cash_weight,median_cash_weight,pct_days_at_cash_cap,avg_equity_exposure,total_turnover,total_transaction_cost
+AURORA cash cap 20%,0.2,0.485557,0.367059,0.197078,1.685899,2.176414,-0.22497,1.631591,0.191056,0.2,0.92163,0.808944,1.372527,0.001373
+AURORA cash cap 40%,0.4,0.359474,0.274556,0.149571,1.697369,2.215429,-0.172158,1.594787,0.375382,0.4,0.92163,0.624618,1.495281,0.001495
+AURORA cash cap 60%,0.6,0.243228,0.18766,0.10373,1.710287,2.277956,-0.116788,1.606851,0.556502,0.6,0.874608,0.443498,1.617999,0.001618
+AURORA cash cap 80%,0.8,0.128835,0.100466,0.065105,1.503144,2.014131,-0.068712,1.462131,0.721779,0.8,0.68652,0.278221,1.784803,0.001785

@@ -1,0 +1,2 @@
+run_id,modeling_matrix,n_modeling_rows,n_candidate_feature_columns,n_classified_market_state_feature_columns,n_definite_timestamp_violation_columns,n_ambiguous_external_lag_required_columns,n_dates_changed_after_proposed_correction,overall_status,manuscript_sentence
+20260718_154326,/content/drive/MyDrive/AURORA_TWETF/data/modeling/AURORA_TWETF_features_with_labels.parquet,1262,415,415,0,0,0,The audit found zero detected timestamp violations.,The automated feature-observability audit found zero detected timestamp violations across classified market-state feature columns.

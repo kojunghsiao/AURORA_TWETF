@@ -1,0 +1,45 @@
+comparison,strategy_control,comparator_control,metric,observed_difference,ci95_lower,ci95_upper,result,bootstrap_replications,block_length,ci_type
+AURORA cash cap 60% vs AURORA cash cap 20%,AURORA cash cap 60%,AURORA cash cap 20%,diff_total_return,-0.242329,-0.69697,0.039818,Not significant,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 20%,AURORA cash cap 60%,AURORA cash cap 20%,diff_sharpe,0.024388,-0.222241,0.208869,Not significant,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 20%,AURORA cash cap 60%,AURORA cash cap 20%,diff_sortino,0.101542,-0.436708,0.378572,Not significant,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 20%,AURORA cash cap 60%,AURORA cash cap 20%,drawdown_improvement,0.108182,0.028324,0.142182,Significant positive,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 40%,AURORA cash cap 60%,AURORA cash cap 40%,diff_total_return,-0.116246,-0.305258,0.01606,Not significant,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 40%,AURORA cash cap 60%,AURORA cash cap 40%,diff_sharpe,0.012918,-0.172418,0.133154,Not significant,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 40%,AURORA cash cap 60%,AURORA cash cap 40%,diff_sortino,0.062527,-0.368603,0.244207,Not significant,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 40%,AURORA cash cap 60%,AURORA cash cap 40%,drawdown_improvement,0.055371,0.013061,0.075336,Significant positive,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 80%,AURORA cash cap 60%,AURORA cash cap 80%,diff_total_return,0.114393,-0.002924,0.261713,Not significant,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 80%,AURORA cash cap 60%,AURORA cash cap 80%,diff_sharpe,0.207143,-0.115503,0.757857,Not significant,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 80%,AURORA cash cap 60%,AURORA cash cap 80%,diff_sortino,0.263825,-0.233553,1.844369,Not significant,5000,20,percentile
+AURORA cash cap 60% vs AURORA cash cap 80%,AURORA cash cap 60%,AURORA cash cap 80%,drawdown_improvement,-0.048076,-0.068136,-0.005718,Significant negative,5000,20,percentile
+AURORA cash cap 60% vs Uniform-probability AURORA,AURORA cash cap 60%,Uniform-probability AURORA,diff_total_return,0.004254,-0.000106,0.010964,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Uniform-probability AURORA,AURORA cash cap 60%,Uniform-probability AURORA,diff_sharpe,0.011835,-0.02971,0.045183,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Uniform-probability AURORA,AURORA cash cap 60%,Uniform-probability AURORA,diff_sortino,0.028812,-0.054516,0.077812,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Uniform-probability AURORA,AURORA cash cap 60%,Uniform-probability AURORA,drawdown_improvement,-0.000158,-0.00179,0.001818,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Class-prior-probability AURORA,AURORA cash cap 60%,Class-prior-probability AURORA,diff_total_return,0.000484,-7.3e-05,0.001454,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Class-prior-probability AURORA,AURORA cash cap 60%,Class-prior-probability AURORA,diff_sharpe,0.001173,-0.004474,0.00578,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Class-prior-probability AURORA,AURORA cash cap 60%,Class-prior-probability AURORA,diff_sortino,0.002889,-0.009237,0.009603,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Class-prior-probability AURORA,AURORA cash cap 60%,Class-prior-probability AURORA,drawdown_improvement,-3.7e-05,-0.000327,0.000278,Not significant,5000,20,percentile
+AURORA cash cap 60% vs No-probability mean-variance AURORA,AURORA cash cap 60%,No-probability mean-variance AURORA,diff_total_return,0.030269,-0.054456,0.10238,Not significant,5000,20,percentile
+AURORA cash cap 60% vs No-probability mean-variance AURORA,AURORA cash cap 60%,No-probability mean-variance AURORA,diff_sharpe,0.514327,0.075895,0.810828,Significant positive,5000,20,percentile
+AURORA cash cap 60% vs No-probability mean-variance AURORA,AURORA cash cap 60%,No-probability mean-variance AURORA,diff_sortino,0.829667,0.093658,1.636299,Significant positive,5000,20,percentile
+AURORA cash cap 60% vs No-probability mean-variance AURORA,AURORA cash cap 60%,No-probability mean-variance AURORA,drawdown_improvement,0.064677,0.001243,0.090673,Significant positive,5000,20,percentile
+AURORA cash cap 60% vs Static 40% equity / 60% cash,AURORA cash cap 60%,Static 40% equity / 60% cash,diff_total_return,0.006549,-0.028741,0.060006,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Static 40% equity / 60% cash,AURORA cash cap 60%,Static 40% equity / 60% cash,diff_sharpe,-0.021616,-0.310652,0.20096,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Static 40% equity / 60% cash,AURORA cash cap 60%,Static 40% equity / 60% cash,diff_sortino,0.041451,-0.606004,0.395385,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Static 40% equity / 60% cash,AURORA cash cap 60%,Static 40% equity / 60% cash,drawdown_improvement,0.003035,-0.011284,0.00877,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Static 50% equity / 50% cash,AURORA cash cap 60%,Static 50% equity / 50% cash,diff_total_return,-0.058312,-0.159313,0.018612,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Static 50% equity / 50% cash,AURORA cash cap 60%,Static 50% equity / 50% cash,diff_sharpe,-0.021616,-0.294396,0.191471,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Static 50% equity / 50% cash,AURORA cash cap 60%,Static 50% equity / 50% cash,diff_sortino,0.041451,-0.551948,0.37714,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Static 50% equity / 50% cash,AURORA cash cap 60%,Static 50% equity / 50% cash,drawdown_improvement,0.031184,0.000997,0.042843,Significant positive,5000,20,percentile
+AURORA cash cap 60% vs Static 44.35% equity / 55.65% cash,AURORA cash cap 60%,Static 44.35% equity / 55.65% cash,diff_total_return,-0.021382,-0.0773,0.032439,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Static 44.35% equity / 55.65% cash,AURORA cash cap 60%,Static 44.35% equity / 55.65% cash,diff_sharpe,-0.021616,-0.305946,0.194045,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Static 44.35% equity / 55.65% cash,AURORA cash cap 60%,Static 44.35% equity / 55.65% cash,diff_sortino,0.041451,-0.560108,0.379643,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Static 44.35% equity / 55.65% cash,AURORA cash cap 60%,Static 44.35% equity / 55.65% cash,drawdown_improvement,0.015366,-0.00477,0.023873,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Volatility-targeted equal-weight baseline,AURORA cash cap 60%,Volatility-targeted equal-weight baseline,diff_total_return,-0.157882,-0.397219,0.004888,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Volatility-targeted equal-weight baseline,AURORA cash cap 60%,Volatility-targeted equal-weight baseline,diff_sharpe,-0.15822,-0.586058,0.284721,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Volatility-targeted equal-weight baseline,AURORA cash cap 60%,Volatility-targeted equal-weight baseline,diff_sortino,-0.177856,-1.33564,0.580211,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Volatility-targeted equal-weight baseline,AURORA cash cap 60%,Volatility-targeted equal-weight baseline,drawdown_improvement,0.05055,0.002636,0.066504,Significant positive,5000,20,percentile
+AURORA cash cap 60% vs Drawdown-control equal-weight baseline,AURORA cash cap 60%,Drawdown-control equal-weight baseline,diff_total_return,-0.300459,-0.887882,0.044314,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Drawdown-control equal-weight baseline,AURORA cash cap 60%,Drawdown-control equal-weight baseline,diff_sharpe,-0.13303,-0.701535,0.516643,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Drawdown-control equal-weight baseline,AURORA cash cap 60%,Drawdown-control equal-weight baseline,diff_sortino,-0.253033,-1.391782,1.329769,Not significant,5000,20,percentile
+AURORA cash cap 60% vs Drawdown-control equal-weight baseline,AURORA cash cap 60%,Drawdown-control equal-weight baseline,drawdown_improvement,0.080463,0.024605,0.127476,Significant positive,5000,20,percentile

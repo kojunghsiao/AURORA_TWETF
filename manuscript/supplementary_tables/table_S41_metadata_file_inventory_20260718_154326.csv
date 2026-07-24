@@ -1,0 +1,2 @@
+path,n_rows,columns,selected
+/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/tables/table_09_feature_metadata.csv,415,"feature,source_symbol,feature_group,window_or_lag,leakage_control",True

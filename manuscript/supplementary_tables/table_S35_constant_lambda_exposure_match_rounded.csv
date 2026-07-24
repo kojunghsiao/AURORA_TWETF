@@ -1,0 +1,5 @@
+strategy_control,constant_lambda,total_return,sharpe_ratio,sortino_ratio,max_drawdown,avg_cash_weight,pct_days_at_cash_cap,avg_equity_exposure,cash_match_error_abs,total_turnover,total_transaction_cost
+Original dynamic AURORA,,0.242284,1.698817,2.242181,-0.118957,0.556516,0.874608,0.443484,0.0,1.647908,0.001648
+Exposure-matched constant-lambda AURORA,34.0,0.242516,1.699921,2.243984,-0.118949,0.556498,0.874608,0.443502,1.8e-05,1.64396,0.001644
+Exposure-matched constant-lambda no-probability AURORA,34.0,0.242492,1.699822,2.243853,-0.118945,0.5565,0.874608,0.4435,1.7e-05,1.64404,0.001644
+Static exposure-matched cash baseline,,0.2646,1.731903,2.236505,-0.132149,0.556516,0.0,0.443484,0.0,0.443484,0.000443

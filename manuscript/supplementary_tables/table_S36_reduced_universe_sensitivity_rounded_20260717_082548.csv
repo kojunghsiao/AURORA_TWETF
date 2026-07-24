@@ -1,0 +1,5 @@
+strategy_control,universe_key,universe_description,asset_universe,n_days,total_return,sharpe_ratio,sortino_ratio,max_drawdown,avg_cash_weight,pct_days_at_cash_cap,avg_equity_exposure,median_cov_condition_number,p90_cov_condition_number
+Reduced-universe: Full universe,FULL,"Full universe: 0050, 006208, 00692, 00881","0050,006208,00692,00881",319,0.242284,1.698817,2.242181,-0.118957,0.556516,0.874608,0.443484,38.013066,38.675112
+Reduced-universe: Remove 0050,REMOVE_0050,Reduced universe excluding 0050,"006208,00692,00881",319,0.241774,1.695936,2.231681,-0.118375,0.554501,0.874608,0.445499,28.246006,29.195983
+Reduced-universe: Remove 006208,REMOVE_006208,Reduced universe excluding 006208,"0050,00692,00881",319,0.239537,1.686595,2.198921,-0.118989,0.555459,0.874608,0.444541,28.541272,28.904225
+Reduced-universe: Synthetic Taiwan 50 sleeve,SYNTH_TW50,"Synthetic Taiwan 50 sleeve: 0.5*0050 + 0.5*006208, plus 00692 and 00881","TW50_SYN,00692,00881",319,0.240713,1.692333,2.219331,-0.118683,0.554977,0.874608,0.445023,28.920328,29.514348

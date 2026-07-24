@@ -1,0 +1,5 @@
+canonical_benchmark,assets,weight_rule,rebalance_rule,transaction_cost_rule,cash_return,price_field,purpose
+Canonical 0050-only,0050,100% 0050,No rebalancing after initial exposure,No turnover cost in canonical passive series,Zero,Adjusted close when available; close otherwise,Canonical passive Taiwan 50-style reference
+Canonical 00881-only,00881,100% 00881,No rebalancing after initial exposure,No turnover cost in canonical passive series,Zero,Adjusted close when available; close otherwise,Canonical passive technology-oriented Taiwan ETF reference
+Canonical equal-weight four-ETF,"0050, 006208, 00692, 00881",25% each ETF at scheduled rebalance dates,month_end,10 bps multiplied by turnover,Zero,Adjusted close when available; close otherwise,Canonical passive diversified four-ETF reference
+Canonical equal-weight buy-and-hold diagnostic,"0050, 006208, 00692, 00881","25% each ETF at initial date, then allowed to drift",None,No turnover cost,Zero,Adjusted close when available; close otherwise,Repository diagnostic only; not used as main equal-weight benchmark

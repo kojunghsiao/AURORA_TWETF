@@ -1,0 +1,5 @@
+strategy_control,universe_key,asset_universe,avg_cash_weight,median_cash_weight,pct_days_at_cash_cap,avg_equity_exposure,avg_0050_weight,avg_006208_weight,avg_TW50_SYN_weight,avg_00692_weight,avg_00881_weight,avg_max_risky_asset_weight,total_turnover,total_transaction_cost,median_cov_condition_number,p90_cov_condition_number
+Reduced-universe: Full universe,FULL,"0050,006208,00692,00881",0.556516,0.6,0.874608,0.443484,0.088408,0.117096,,0.181459,0.056521,0.181459,1.647908,0.001648,38.013066,38.675112
+Reduced-universe: Remove 0050,REMOVE_0050,"006208,00692,00881",0.554501,0.6,0.874608,0.445499,,0.157626,,0.22246,0.065413,0.22246,1.608642,0.001609,28.246006,29.195983
+Reduced-universe: Remove 006208,REMOVE_006208,"0050,00692,00881",0.555459,0.6,0.874608,0.444541,0.138319,,,0.232281,0.073941,0.232281,1.627039,0.001627,28.541272,28.904225
+Reduced-universe: Synthetic Taiwan 50 sleeve,SYNTH_TW50,"TW50_SYN,00692,00881",0.554977,0.6,0.874608,0.445023,,,0.149464,0.226578,0.068981,0.226578,1.612254,0.001612,28.920328,29.514348
