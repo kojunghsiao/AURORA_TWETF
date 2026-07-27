@@ -1,0 +1,3 @@
+horizon,eligible_rows_before_deduplication,unique_dates_after_deduplication,dates_with_multiple_eligible_predictions,max_eligible_predictions_for_one_date,split_counts_selected,fold_counts_selected
+20-day,1015,548,318,3,"{'test': 359, 'validation': 189}","{'WF1': 252, 'WF3': 170, 'WF2': 126}"
+60-day,775,508,198,3,"{'test': 319, 'validation': 189}","{'WF1': 252, 'WF3': 130, 'WF2': 126}"

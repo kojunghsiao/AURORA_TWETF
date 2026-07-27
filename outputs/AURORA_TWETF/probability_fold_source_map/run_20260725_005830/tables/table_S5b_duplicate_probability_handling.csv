@@ -1,0 +1,10 @@
+item,rule
+Duplicate source,Overlapping walk-forward validation/test windows may generate more than one eligible out-of-sample probability row for the same calendar date.
+Deduplication key,Calendar date.
+Sorting variables,"Date, split priority, and fold number."
+Split priority,Training < validation < test. Allocation inputs are drawn from eligible out-of-sample validation/test rows.
+Retained row,The final eligible row after sorting is retained for each calendar date.
+Applied separately to,20-day and 60-day probability files.
+Final alignment,Deduplicated 20-day and 60-day probability files are aligned on common dates before allocation.
+Repository diagnostic,outputs/AURORA_TWETF/diagnostics/probability_fold_source_map.csv
+Claim use,Defines the final probability sequence supplied to the allocation layer; does not use realized evaluation-period portfolio returns.

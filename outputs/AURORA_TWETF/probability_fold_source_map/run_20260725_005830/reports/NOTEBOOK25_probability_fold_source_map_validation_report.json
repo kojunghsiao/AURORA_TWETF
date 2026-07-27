@@ -1,0 +1,100 @@
+{
+  "project_code": "AURORA_TWETF",
+  "notebook": "25_probability_fold_source_map",
+  "run_id": "20260725_005830",
+  "run_timestamp_utc": "2026-07-25T00:58:30Z",
+  "purpose": "Document duplicate probability handling for overlapping walk-forward predictions.",
+  "allocation_input_index": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/NOTEBOOK08_OR_ALLOCATION_INPUT_INDEX_PURGED_WF.csv",
+  "probability_files": [
+    {
+      "horizon": "20-day",
+      "target_col": "TAIEX_regime_fixed_20d",
+      "probability_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/probabilities/selected_probabilities_TAIEX_regime_fixed_20d_E1_validation_weighted_probability_ensemble.parquet"
+    },
+    {
+      "horizon": "60-day",
+      "target_col": "TAIEX_regime_fixed_60d",
+      "probability_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/purged_walk_forward_models/run_20260624_031817/probabilities/selected_probabilities_TAIEX_regime_fixed_60d_E1_validation_weighted_probability_ensemble.parquet"
+    }
+  ],
+  "deduplication_rule": {
+    "key": "calendar date",
+    "sorting": [
+      "date",
+      "split_priority",
+      "fold_number"
+    ],
+    "retained_row": "final eligible row after sorting",
+    "eligible_splits": [
+      "validation",
+      "test"
+    ],
+    "split_priority": {
+      "train": 0,
+      "validation": 1,
+      "test": 2
+    },
+    "applied_separately_to": [
+      "20-day probability file",
+      "60-day probability file"
+    ]
+  },
+  "summary": [
+    {
+      "horizon": "20-day",
+      "eligible_rows_before_deduplication": 1015,
+      "unique_dates_after_deduplication": 548,
+      "dates_with_multiple_eligible_predictions": 318,
+      "max_eligible_predictions_for_one_date": 3,
+      "split_counts_selected": {
+        "test": 359,
+        "validation": 189
+      },
+      "fold_counts_selected": {
+        "WF1": 252,
+        "WF3": 170,
+        "WF2": 126
+      }
+    },
+    {
+      "horizon": "60-day",
+      "eligible_rows_before_deduplication": 775,
+      "unique_dates_after_deduplication": 508,
+      "dates_with_multiple_eligible_predictions": 198,
+      "max_eligible_predictions_for_one_date": 3,
+      "split_counts_selected": {
+        "test": 319,
+        "validation": 189
+      },
+      "fold_counts_selected": {
+        "WF1": 252,
+        "WF3": 130,
+        "WF2": 126
+      }
+    }
+  ],
+  "evaluation_window_summary": [
+    {
+      "horizon": "20-day",
+      "selected_dates": 319,
+      "rows": 319,
+      "dates_with_multiple_eligible_predictions": 235,
+      "max_eligible_predictions_for_one_date": 3
+    },
+    {
+      "horizon": "60-day",
+      "selected_dates": 319,
+      "rows": 319,
+      "dates_with_multiple_eligible_predictions": 195,
+      "max_eligible_predictions_for_one_date": 3
+    }
+  ],
+  "outputs": {
+    "fold_source_map": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_fold_source_map/run_20260725_005830/diagnostics/probability_fold_source_map.csv",
+    "summary": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_fold_source_map/run_20260725_005830/tables/probability_fold_source_summary.csv",
+    "evaluation_window_summary": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_fold_source_map/run_20260725_005830/tables/probability_fold_source_evaluation_window_summary.csv",
+    "table_s5b": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/probability_fold_source_map/run_20260725_005830/tables/table_S5b_duplicate_probability_handling.csv",
+    "global_fold_source_map": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/diagnostics/probability_fold_source_map.csv",
+    "global_table_s5b": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/tables/table_S5b_duplicate_probability_handling.csv"
+  }
+}
