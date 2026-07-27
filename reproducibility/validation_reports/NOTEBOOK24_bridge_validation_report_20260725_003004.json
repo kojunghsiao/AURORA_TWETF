@@ -1,0 +1,124 @@
+{
+  "project_code": "AURORA_TWETF",
+  "notebook": "24_bridge_main_source_aware_and_diagnostic_AURORA",
+  "run_id": "20260725_003004",
+  "run_timestamp_utc": "2026-07-25T00:30:04Z",
+  "purpose": "Bridge main source-aware AURORA return series to standalone diagnostic AURORA reconstruction.",
+  "input_files": {
+    "main_source_aware_return_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/ROMA_AURORA_TWETF/source_aware_unified_paper_comparison/run_20260625_065916/returns/notebook13B_source_aware_strict_test_return_matrix.parquet",
+    "diagnostic_return_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_exposure_matched_lambda_reduced_universe/run_20260717_082548/returns/all_notebook18_returns.parquet",
+    "main_weight_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/statistical_significance_block_bootstrap/run_20260624_124834/bootstrap_samples/bootstrap_samples_AURORA10_UAMV_B_more60_defensive_vs_B1_equal_weight_all_etfs_block20.parquet",
+    "diagnostic_weight_path": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/aurora_exposure_matched_lambda_reduced_universe/run_20260717_082548/weights/all_notebook18_weights.parquet"
+  },
+  "extraction_metadata": {
+    "main_return": {
+      "format": "wide",
+      "return_column": "AURORA10_UAMV_B_more60_defensive",
+      "matched_label": "AURORA10_UAMV_B_more60_defensive",
+      "match_type": "exact_normalized_column"
+    },
+    "diagnostic_return": {
+      "format": "long",
+      "strategy_column": "strategy_control",
+      "return_column": "net_return",
+      "matched_label": "Original dynamic AURORA",
+      "match_type": "exact_normalized"
+    },
+    "main_weight": {
+      "format": "not_found",
+      "reason": "Could not extract weight columns.",
+      "columns": [
+        "bootstrap_id",
+        "block_length",
+        "aurora_policy",
+        "benchmark_policy",
+        "diff_total_return",
+        "diff_annual_return",
+        "diff_annual_volatility",
+        "diff_sharpe",
+        "diff_sortino",
+        "drawdown_improvement",
+        "diff_calmar",
+        "annualized_mean_excess_return",
+        "excess_return_hit_rate"
+      ]
+    },
+    "diagnostic_weight": {
+      "format": "long_strategy_wide_assets",
+      "strategy_column": "strategy_control",
+      "matched_label": "Original dynamic AURORA",
+      "asset_weight_columns": [
+        "0050",
+        "006208",
+        "00692",
+        "00881",
+        "CASH"
+      ]
+    }
+  },
+  "evaluation_window": {
+    "strict_start": "2024-11-27",
+    "strict_end": "2026-03-25",
+    "common_dates": 319,
+    "common_start": "2024-11-27",
+    "common_end": "2026-03-25"
+  },
+  "key_scalar_metrics": {
+    "common_dates": 319,
+    "common_start_date": "2024-11-27",
+    "common_end_date": "2026-03-25",
+    "main_first_return_date_in_window": "2024-11-27",
+    "diagnostic_first_return_date_in_window": "2024-11-27",
+    "main_n_days_in_window": 319,
+    "diagnostic_n_days_in_window": 319,
+    "daily_return_correlation": 0.9670140815083538,
+    "drawdown_correlation": 0.9883005727044821,
+    "mean_signed_daily_return_difference": 0.000338428038785679,
+    "mean_absolute_daily_return_difference": 0.0008213895865766197,
+    "median_absolute_daily_return_difference": 0.00019961746053227987,
+    "root_mean_squared_daily_return_difference": 0.0019545911622645897,
+    "annualized_tracking_error_main_minus_diagnostic": 0.03060754482386594,
+    "final_cumulative_return_difference": 0.13923571135641133,
+    "max_absolute_cumulative_return_difference": 0.14304407913928197,
+    "main_total_return": 0.3815196963406473,
+    "diagnostic_total_return": 0.24228398498423598,
+    "total_return_difference_main_minus_diagnostic": 0.13923571135641133,
+    "main_sharpe": 2.2606614523501247,
+    "diagnostic_sharpe": 1.698816564437738,
+    "sharpe_difference_main_minus_diagnostic": 0.5618448879123867,
+    "main_sortino": 3.2891046468451814,
+    "diagnostic_sortino": 2.242180945726774,
+    "sortino_difference_main_minus_diagnostic": 1.0469237011184074,
+    "main_max_drawdown": -0.11678757250401262,
+    "diagnostic_max_drawdown": -0.11895671772570882,
+    "max_drawdown_difference_main_minus_diagnostic": 0.0021691452216962004,
+    "main_annual_volatility": 0.11595296036781393,
+    "diagnostic_annual_volatility": 0.1040998338004427,
+    "cash_common_dates": 0,
+    "main_avg_cash_weight": NaN,
+    "diagnostic_avg_cash_weight": NaN,
+    "avg_cash_weight_difference_main_minus_diagnostic": NaN,
+    "cash_weight_correlation": NaN,
+    "mean_absolute_cash_weight_difference": NaN,
+    "main_cash_cap_binding_frequency": NaN,
+    "diagnostic_cash_cap_binding_frequency": NaN,
+    "cash_cap_binding_frequency_difference_main_minus_diagnostic": NaN,
+    "turnover_common_dates": 0,
+    "main_total_turnover_estimated_from_weights": NaN,
+    "diagnostic_total_turnover_estimated_from_weights": NaN,
+    "total_turnover_difference_main_minus_diagnostic": NaN,
+    "main_avg_turnover_estimated_from_weights": NaN,
+    "diagnostic_avg_turnover_estimated_from_weights": NaN
+  },
+  "recommended_claim_scope": "Bridge diagnostics support high return alignment, but cash-weight alignment is unavailable; mechanism claims should remain qualified by pipeline differences.",
+  "outputs": {
+    "table_s32": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/bridge_main_vs_diagnostic_AURORA/run_20260725_003004/tables/table_S32_main_vs_diagnostic_AURORA_bridge.csv",
+    "table_s32_rounded": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/bridge_main_vs_diagnostic_AURORA/run_20260725_003004/tables/table_S32_main_vs_diagnostic_AURORA_bridge_rounded.csv",
+    "daily_bridge": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/bridge_main_vs_diagnostic_AURORA/run_20260725_003004/diagnostics/main_vs_diagnostic_AURORA_bridge_daily.csv",
+    "scalar_metrics": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/bridge_main_vs_diagnostic_AURORA/run_20260725_003004/diagnostics/main_vs_diagnostic_AURORA_bridge_scalar_metrics.json",
+    "recommended_wording": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/bridge_main_vs_diagnostic_AURORA/run_20260725_003004/reports/recommended_manuscript_bridge_wording.txt",
+    "global_table_s32": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/tables/table_S32_main_vs_diagnostic_AURORA_bridge.csv",
+    "global_table_s32_rounded": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/tables/table_S32_main_vs_diagnostic_AURORA_bridge_rounded.csv",
+    "global_daily_bridge": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/diagnostics/main_vs_diagnostic_AURORA_bridge_daily.csv"
+  }
+}
