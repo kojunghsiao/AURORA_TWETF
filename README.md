@@ -61,6 +61,9 @@ AURORA_TWETF/
 ├── EXECUTION_ORDER.md
 ├── ENVIRONMENT.md
 ├── requirements.txt
+├── requirements_project_versions.txt
+├── requirements_colab_full.txt
+│
 ├── notebooks/
 │   ├── 01_*.ipynb
 │   ├── 02_*.ipynb
@@ -68,25 +71,64 @@ AURORA_TWETF/
 │   ├── 21_equivalence_pre_eval_lambda_optimizer_diagnostics.ipynb
 │   ├── 22_cash_return_risk_free_sensitivity.ipynb
 │   ├── 23_canonical_passive_benchmark_reconciliation.ipynb
-│   ├── 24_bridge_main_source_aware_and_diagnostic_AURORA
-│   └── 25_probability_fold_source_map
+│   ├── 24_bridge_main_source_aware_and_diagnostic_AURORA.ipynb
+│   └── 25_probability_fold_source_map.ipynb
+│
 ├── data/
 │   ├── raw_yfinance/
 │   ├── modeling/
 │   └── processed/
+│
 ├── outputs/
-│   ├── tables/
-│   ├── figures/
-│   ├── reports/
-│   ├── returns/
-│   ├── weights/
-│   └── diagnostics/
+│   └── AURORA_TWETF/
+│       ├── canonical_passive_benchmarks/
+│       │   ├── README.md
+│       │   └── run_20260723_035525/
+│       │
+│       ├── equivalence_lambda_cash_sensitivity/
+│       │   ├── README.md
+│       │   └── run_20260722_133503/
+│       │
+│       ├── bridge_main_vs_diagnostic_AURORA/
+│       │   └── run_20260725_003004/
+│       │       ├── tables/
+│       │       ├── diagnostics/
+│       │       └── reports/
+│       │
+│       ├── probability_fold_source_map/
+│       │   └── run_20260725_005830/
+│       │       ├── tables/
+│       │       ├── diagnostics/
+│       │       └── reports/
+│       │
+│       ├── tables/
+│       │   ├── table_S32_main_vs_diagnostic_AURORA_bridge_rounded.csv
+│       │   └── table_S5b_duplicate_probability_handling.csv
+│       │
+│       ├── diagnostics/
+│       │   ├── main_vs_diagnostic_AURORA_bridge_daily.csv
+│       │   └── probability_fold_source_map.csv
+│       │
+│       ├── reports/
+│       │   ├── NOTEBOOK24_bridge_validation_report_20260725_003004.json
+│       │   └── NOTEBOOK25_probability_fold_source_map_validation_report_20260725_005830.json
+│       │
+│       ├── figures/
+│       ├── returns/
+│       ├── weights/
+│       └── diagnostics/
+│
 ├── reproducibility/
+│   ├── README.md
 │   ├── OUTPUT_MANIFEST.csv
 │   ├── pipeline_metadata_AURORA_TWETF.csv
 │   ├── random_seeds.md
 │   └── validation_reports/
+│       ├── NOTEBOOK24_bridge_validation_report_20260725_003004.json
+│       └── NOTEBOOK25_probability_fold_source_map_validation_report_20260725_005830.json
+│
 └── manuscript/
+    ├── README.md
     ├── tables/
     ├── figures/
     └── supplementary_tables/
