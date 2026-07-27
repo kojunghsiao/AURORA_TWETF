@@ -1,0 +1,30 @@
+category,metric,value,interpretation
+sample,Common dates,319,Number of overlapping daily observations used in bridge comparison.
+sample,Common date range,2024-11-27 to 2026-03-25,Overlapping aligned evaluation date range.
+sample,Main first return date in window,2024-11-27,First main source-aware AURORA return date found in evaluation window.
+sample,Diagnostic first return date in window,2024-11-27,First diagnostic AURORA return date found in evaluation window.
+returns,Daily return correlation,0.967014,High daily-return alignment
+returns,Drawdown correlation,0.988301,Correlation between drawdown paths computed on common dates.
+returns,Mean absolute daily return difference,0.000821,Average absolute daily return gap between main and diagnostic AURORA.
+returns,Median absolute daily return difference,0.0002,Median absolute daily return gap between main and diagnostic AURORA.
+returns,Annualized tracking error,0.030608,Annualized standard deviation of daily return difference.
+returns,Final cumulative return difference,0.139236,Final cumulative return gap: main minus diagnostic.
+returns,Maximum absolute cumulative return difference,0.143044,Largest absolute cumulative return gap over common dates.
+performance,Main total return,0.38152,Performance of main source-aware AURORA series on common dates.
+performance,Diagnostic total return,0.242284,Performance of diagnostic AURORA reconstruction on common dates.
+performance,Total return difference,0.139236,Main minus diagnostic total return.
+performance,Main Sharpe,2.260661,Sharpe ratio of main source-aware AURORA series on common dates.
+performance,Diagnostic Sharpe,1.698817,Sharpe ratio of diagnostic AURORA reconstruction on common dates.
+performance,Main Sortino,3.289105,Sortino ratio of main source-aware AURORA series on common dates.
+performance,Diagnostic Sortino,2.242181,Sortino ratio of diagnostic AURORA reconstruction on common dates.
+performance,Main max drawdown,-0.116788,Maximum drawdown of main source-aware AURORA series on common dates.
+performance,Diagnostic max drawdown,-0.118957,Maximum drawdown of diagnostic AURORA reconstruction on common dates.
+exposure,Cash common dates,0,Number of dates with both main and diagnostic cash weights available.
+exposure,Main average cash weight,,Average cash weight of main source-aware AURORA if available.
+exposure,Diagnostic average cash weight,,Average cash weight of diagnostic AURORA reconstruction.
+exposure,Average cash-weight difference,,Main minus diagnostic average cash weight.
+exposure,Cash-weight correlation,,Cash-exposure alignment unavailable
+exposure,Mean absolute cash-weight difference,,Average absolute cash-weight gap if both weight series are available.
+exposure,Main cash-cap binding frequency,,Frequency at which main AURORA cash weight is at 0.60 cap if available.
+exposure,Diagnostic cash-cap binding frequency,,Frequency at which diagnostic AURORA cash weight is at 0.60 cap.
+interpretation,Recommended claim scope,"Bridge diagnostics support high return alignment, but cash-weight alignment is unavailable; mechanism claims should remain qualified by pipeline differences.",Use this row to choose the final manuscript wording.
