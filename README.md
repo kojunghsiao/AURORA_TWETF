@@ -71,8 +71,8 @@ AURORA_TWETF/
 │   ├── 21_equivalence_pre_eval_lambda_optimizer_diagnostics.ipynb
 │   ├── 22_cash_return_risk_free_sensitivity.ipynb
 │   ├── 23_canonical_passive_benchmark_reconciliation.ipynb
-│   ├── 24_bridge_main_source_aware_and_diagnostic_AURORA.ipynb
-│   └── 25_probability_fold_source_map.ipynb
+│   ├── ...
+│   └── 27_oracle_probability_positive_control.ipynb
 │
 ├── data/
 │   ├── raw_yfinance/
