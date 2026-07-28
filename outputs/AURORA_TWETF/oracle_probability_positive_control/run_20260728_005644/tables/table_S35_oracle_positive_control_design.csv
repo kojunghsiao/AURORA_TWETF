@@ -1,0 +1,9 @@
+component,specification,interpretation
+Positive-control probability,\(\tilde{\mathbf p}_t=(1-\kappa)\mathbf p_{\mathrm{prior}}+\kappa\mathbf e_{y_t}\),Deliberately non-deployable oracle-with-noise probability sequence used to test diagnostic power.
+Prior probability,Pre-evaluation empirical class-prior distribution estimated before the aligned evaluation window.,Defines the no-timing baseline in the oracle mixture.
+Oracle component,One-hot realized 20-day and 60-day regime labels in the aligned evaluation window.,Introduces controlled signal strength; not available in real time.
+Kappa values,"0.0, 0.1, 0.25, 0.5, 0.75, 1.0",Signal strength grid from no oracle information to perfect realized-label information.
+Ordered control,Oracle probabilities kept on their original dates.,Tests whether informative probabilities can affect the allocation path.
+Shuffled control,Oracle probability rows shuffled across dates; 5 replications per kappa.,Preserves marginal probability distribution but destroys timing.
+Constant-lambda control,No-probability constant-lambda control with lambda=34.,Tests behavior without dynamic probability timing.
+Claim use,Diagnostic positive control only.,Demonstrates whether the attribution framework can detect timing information when such information is injected.
