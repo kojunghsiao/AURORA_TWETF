@@ -55,7 +55,6 @@ Raw market data are downloaded from public yfinance-accessible sources by the da
 
 ## 3. Repository structure
 
-```text
 AURORA_TWETF/
 ├── README.md
 ├── EXECUTION_ORDER.md
@@ -71,12 +70,15 @@ AURORA_TWETF/
 │   ├── 21_equivalence_pre_eval_lambda_optimizer_diagnostics.ipynb
 │   ├── 22_cash_return_risk_free_sensitivity.ipynb
 │   ├── 23_canonical_passive_benchmark_reconciliation.ipynb
-│   ├── ...
+│   ├── 24_bridge_main_source_aware_and_diagnostic_AURORA.ipynb
+│   ├── 25_probability_fold_source_map.ipynb
+│   ├── 26_fold_rule_sensitivity.ipynb
 │   └── 27_oracle_probability_positive_control.ipynb
 │
 ├── data/
 │   ├── raw_yfinance/
 │   ├── modeling/
+│   ├── panels/
 │   └── processed/
 │
 ├── outputs/
@@ -101,22 +103,91 @@ AURORA_TWETF/
 │       │       ├── diagnostics/
 │       │       └── reports/
 │       │
+│       ├── fold_rule_sensitivity/
+│       │   └── run_<RUN_ID>/
+│       │       ├── tables/
+│       │       │   ├── table_S38_fold_rule_sensitivity_design.csv
+│       │       │   ├── table_S39_fold_rule_probability_sensitivity.csv
+│       │       │   ├── table_S40_fold_rule_portfolio_sensitivity.csv
+│       │       │   ├── table_S41_fold_rule_source_composition.csv
+│       │       │   └── table_S42_fold_rule_difference_vs_latest.csv
+│       │       ├── diagnostics/
+│       │       │   ├── fold_rule_selected_probability_map.csv
+│       │       │   ├── fold_rule_probability_sensitivity_full.csv
+│       │       │   ├── fold_rule_portfolio_sensitivity_full.csv
+│       │       │   ├── fold_rule_source_composition_full.csv
+│       │       │   ├── fold_rule_difference_vs_latest_full.csv
+│       │       │   └── fold_rule_optimizer_diagnostics.csv
+│       │       ├── returns/
+│       │       │   ├── fold_rule_sensitivity_returns.parquet
+│       │       │   └── fold_rule_sensitivity_returns.csv
+│       │       ├── weights/
+│       │       │   ├── fold_rule_sensitivity_weights.parquet
+│       │       │   └── fold_rule_sensitivity_weights.csv
+│       │       └── reports/
+│       │           ├── NOTEBOOK26_fold_rule_sensitivity_validation_report.json
+│       │           └── NOTEBOOK26_file_manifest_SHA256.csv
+│       │
+│       ├── oracle_probability_positive_control/
+│       │   └── run_20260728_005644/
+│       │       ├── tables/
+│       │       │   ├── table_S35_oracle_positive_control_design.csv
+│       │       │   ├── table_S36_oracle_positive_control_performance.csv
+│       │       │   ├── table_S36b_oracle_positive_control_ordered_compact.csv
+│       │       │   ├── table_S37_oracle_ordered_vs_shuffled_comparison.csv
+│       │       │   └── notebook27_oracle_positive_control_interpretation_helper.csv
+│       │       ├── diagnostics/
+│       │       │   ├── oracle_positive_control_diagnostics.csv
+│       │       │   ├── oracle_probability_design_full.csv
+│       │       │   ├── oracle_positive_control_performance_full.csv
+│       │       │   └── oracle_ordered_vs_shuffled_full.csv
+│       │       ├── returns/
+│       │       │   ├── oracle_positive_control_returns.parquet
+│       │       │   └── oracle_positive_control_returns.csv
+│       │       ├── weights/
+│       │       │   ├── oracle_positive_control_weights.parquet
+│       │       │   └── oracle_positive_control_weights.csv
+│       │       └── reports/
+│       │           ├── NOTEBOOK27_oracle_positive_control_validation_report.json
+│       │           └── NOTEBOOK27_file_manifest_SHA256.csv
+│       │
 │       ├── tables/
+│       │   ├── table_S5b_duplicate_probability_handling.csv
+│       │   ├── table_S25b_full_equivalence_test_results.csv
 │       │   ├── table_S32_main_vs_diagnostic_AURORA_bridge_rounded.csv
-│       │   └── table_S5b_duplicate_probability_handling.csv
+│       │   ├── table_S33_ROMA_P4_regime_template_specification.csv
+│       │   ├── table_S34_AURORA_moment_optimizer_specification.csv
+│       │   ├── table_S35_oracle_positive_control_design.csv
+│       │   ├── table_S36_oracle_positive_control_performance.csv
+│       │   ├── table_S36b_oracle_positive_control_ordered_compact.csv
+│       │   ├── table_S37_oracle_ordered_vs_shuffled_comparison.csv
+│       │   ├── table_S38_fold_rule_sensitivity_design.csv
+│       │   ├── table_S39_fold_rule_probability_sensitivity.csv
+│       │   ├── table_S40_fold_rule_portfolio_sensitivity.csv
+│       │   ├── table_S41_fold_rule_source_composition.csv
+│       │   └── table_S42_fold_rule_difference_vs_latest.csv
 │       │
 │       ├── diagnostics/
 │       │   ├── main_vs_diagnostic_AURORA_bridge_daily.csv
-│       │   └── probability_fold_source_map.csv
+│       │   ├── probability_fold_source_map.csv
+│       │   ├── fold_rule_selected_probability_map.csv
+│       │   ├── fold_rule_sensitivity_returns.csv
+│       │   ├── fold_rule_sensitivity_weights.csv
+│       │   ├── oracle_positive_control_returns.csv
+│       │   ├── oracle_positive_control_weights.csv
+│       │   └── oracle_ordered_vs_shuffled_full.csv
 │       │
 │       ├── reports/
 │       │   ├── NOTEBOOK24_bridge_validation_report_20260725_003004.json
-│       │   └── NOTEBOOK25_probability_fold_source_map_validation_report_20260725_005830.json
+│       │   ├── NOTEBOOK25_probability_fold_source_map_validation_report_20260725_005830.json
+│       │   ├── NOTEBOOK26_fold_rule_sensitivity_validation_report_<RUN_ID>.json
+│       │   ├── NOTEBOOK26_file_manifest_SHA256_<RUN_ID>.csv
+│       │   ├── NOTEBOOK27_oracle_positive_control_validation_report_20260728_005644.json
+│       │   └── NOTEBOOK27_file_manifest_SHA256_20260728_005644.csv
 │       │
 │       ├── figures/
 │       ├── returns/
-│       ├── weights/
-│       └── diagnostics/
+│       └── weights/
 │
 ├── reproducibility/
 │   ├── README.md
@@ -125,10 +196,28 @@ AURORA_TWETF/
 │   ├── random_seeds.md
 │   └── validation_reports/
 │       ├── NOTEBOOK24_bridge_validation_report_20260725_003004.json
-│       └── NOTEBOOK25_probability_fold_source_map_validation_report_20260725_005830.json
+│       ├── NOTEBOOK25_probability_fold_source_map_validation_report_20260725_005830.json
+│       ├── NOTEBOOK26_fold_rule_sensitivity_validation_report_<RUN_ID>.json
+│       └── NOTEBOOK27_oracle_positive_control_validation_report_20260728_005644.json
 │
 └── manuscript/
     ├── README.md
     ├── tables/
     ├── figures/
+    │   ├── figure_1_framework.png
+    │   ├── figure_2_drawdown_comparison.png
+    │   └── figure_3_mechanism_attribution_improved.png
     └── supplementary_tables/
+        ├── table_S5b_duplicate_probability_handling.csv
+        ├── table_S25b_full_equivalence_test_results.csv
+        ├── table_S32_main_vs_diagnostic_AURORA_bridge_rounded.csv
+        ├── table_S33_ROMA_P4_regime_template_specification.csv
+        ├── table_S34_AURORA_moment_optimizer_specification.csv
+        ├── table_S35_oracle_positive_control_design.csv
+        ├── table_S36_oracle_positive_control_ordered_compact.csv
+        ├── table_S37_oracle_ordered_vs_shuffled_comparison.csv
+        ├── table_S38_fold_rule_sensitivity_design.csv
+        ├── table_S39_fold_rule_probability_sensitivity.csv
+        ├── table_S40_fold_rule_portfolio_sensitivity.csv
+        ├── table_S41_fold_rule_source_composition.csv
+        └── table_S42_fold_rule_difference_vs_latest.csv
