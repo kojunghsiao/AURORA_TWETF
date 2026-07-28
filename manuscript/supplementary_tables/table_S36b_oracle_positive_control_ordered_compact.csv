@@ -1,0 +1,8 @@
+policy_name,control_type,kappa,shuffle_id,probability_order,n_days,weighted_brier,avg_entropy,avg_bearish_probability,avg_dynamic_lambda,total_return,sharpe,sortino,max_drawdown,avg_cash,cash_cap_binding_frequency,avg_equity_exposure,total_turnover
+constant_lambda_no_probability_lambda_34,constant_lambda_no_probability,,,none,319,,0.912322,0.226299,37.334043,0.243034,1.747023,2.25048,-0.11693,0.58454,0.238245,0.41546,0.313097
+oracle_ordered_kappa_0_0,ordered_oracle_probability,0.0,,ordered,319,0.825278,0.912322,0.226299,37.334043,0.240944,1.741839,2.241516,-0.116911,0.586488,0.250784,0.413512,0.325795
+oracle_ordered_kappa_0_1,ordered_oracle_probability,0.1,,ordered,319,0.668475,0.920276,0.220848,37.423851,0.241035,1.742169,2.242079,-0.116909,0.586412,0.250784,0.413588,0.325661
+oracle_ordered_kappa_0_25,ordered_oracle_probability,0.25,,ordered,319,0.464219,0.902621,0.212671,36.818941,0.241457,1.743312,2.244028,-0.116908,0.58604,0.250784,0.41396,0.322989
+oracle_ordered_kappa_0_5,ordered_oracle_probability,0.5,,ordered,319,0.206319,0.808162,0.199043,34.184906,0.244166,1.750726,2.256608,-0.116909,0.583633,0.241379,0.416367,0.307879
+oracle_ordered_kappa_0_75,ordered_oracle_probability,0.75,,ordered,319,0.05158,0.63064,0.185415,29.474308,0.250664,1.768897,2.287379,-0.116913,0.577857,0.22884,0.422143,0.275902
+oracle_ordered_kappa_1_0,ordered_oracle_probability,1.0,,ordered,319,0.0,0.296264,0.171787,20.842342,0.262492,1.799444,2.33918,-0.11694,0.567356,0.216301,0.432644,0.216137

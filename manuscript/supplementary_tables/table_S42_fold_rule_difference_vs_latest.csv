@@ -1,0 +1,4 @@
+aggregation_rule,comparison,delta_weighted_brier_30_70,delta_total_return,delta_sharpe,delta_sortino,delta_max_drawdown,delta_avg_cash,delta_cash_cap_binding_frequency
+latest,latest_minus_latest,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+earliest,earliest_minus_latest,-0.032503,0.000567,0.001326,0.002283,-1e-06,-0.000538,0.0
+average,average_minus_latest,-0.02915,0.000167,0.000399,0.000641,6e-06,-0.00016,0.0
