@@ -1,0 +1,8 @@
+component,specification,interpretation
+Objective,Test sensitivity to duplicate overlapping-fold probability aggregation.,Evaluates whether final probabilities and AURORA-compatible allocation diagnostics depend on the latest-eligible-fold rule.
+Latest eligible fold,"Sort by date, split priority, and fold number; retain the final eligible out-of-sample row per date.",Matches the documented primary probability-retention rule.
+Earliest eligible fold,"Sort by date, split priority, and fold number; retain the first eligible out-of-sample row per date.",Tests sensitivity to using the earliest available eligible prediction for each date.
+Average eligible probabilities,Average all eligible validation/test probability vectors for the same date separately for each horizon.,Tests sensitivity to ensemble-style aggregation across overlapping eligible folds.
+Horizon treatment,Aggregation is applied separately to the 20-day and 60-day probability files before common-date alignment.,Preserves the horizon-specific probability construction.
+Portfolio diagnostic,Each aggregated probability sequence is passed through the same AURORA-compatible diagnostic allocation layer.,Reports probability sensitivity and downstream portfolio sensitivity under fixed allocation settings.
+Claim use,Diagnostic robustness check.,Assesses whether the main mechanism interpretation is sensitive to overlapping-fold aggregation choices.

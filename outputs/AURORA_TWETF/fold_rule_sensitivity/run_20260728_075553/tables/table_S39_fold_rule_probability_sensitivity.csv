@@ -1,0 +1,4 @@
+aggregation_rule,n_dates,brier_20d,brier_60d,weighted_brier_30_70,avg_entropy,avg_bearish_probability,avg_dynamic_lambda
+latest,319,0.724761,0.908898,0.853657,0.863716,0.190432,35.401542
+earliest,319,0.745698,0.853492,0.821154,0.872939,0.189176,35.606987
+average,319,0.728723,0.865558,0.824507,0.879392,0.192048,35.825755
