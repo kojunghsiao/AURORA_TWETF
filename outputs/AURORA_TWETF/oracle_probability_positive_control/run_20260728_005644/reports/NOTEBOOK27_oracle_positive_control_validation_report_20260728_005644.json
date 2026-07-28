@@ -1,0 +1,72 @@
+{
+  "project_code": "AURORA_TWETF",
+  "notebook": "27_oracle_probability_positive_control",
+  "run_timestamp_utc": "2026-07-28T00:56:44Z",
+  "run_id": "20260728_005644",
+  "purpose": "Synthetic/oracle positive-control diagnostic to test whether the AURORA-compatible allocation framework can express timing information when probability signals are deliberately informative.",
+  "important_caveat": "The oracle probabilities are deliberately non-deployable because they use realized labels. They are used only to test diagnostic power, not to estimate investable performance.",
+  "inputs": {
+    "label_file": "/content/drive/MyDrive/AURORA_TWETF/data/modeling/AURORA_TWETF_features_with_labels.parquet",
+    "etf_return_source": "/content/drive/MyDrive/AURORA_TWETF/data/panels/AURORA_etf_return_panel.parquet",
+    "evaluation_start": "2024-11-27",
+    "evaluation_end": "2026-03-25",
+    "n_evaluation_dates": 319
+  },
+  "probability_design": {
+    "formula": "p_tilde = (1-kappa)*p_prior + kappa*one_hot(y_t)",
+    "kappa_values": [
+      0.0,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "alpha_20": 0.3,
+    "alpha_60": 0.7,
+    "prior20": [
+      0.027571580063626724,
+      0.16755037115588547,
+      0.471898197242842,
+      0.3054082714740191,
+      0.027571580063626724
+    ],
+    "prior60": [
+      0.07211028632025451,
+      0.16755037115588547,
+      0.26299045599151644,
+      0.3107104984093319,
+      0.18663838812301167
+    ],
+    "shuffle_replications": 5,
+    "base_random_seed": 20260727
+  },
+  "allocation_settings": {
+    "lambda0": 10.0,
+    "gamma_U": 2.5,
+    "gamma_B": 2.0,
+    "rho": 0.25,
+    "mu_lookback": 63,
+    "cov_lookback": 126,
+    "mean_shrinkage": 0.6,
+    "momentum_weight": 0.4,
+    "regime_tilt_strength": 0.25,
+    "cash_cap": 0.6,
+    "general_etf_cap": 0.45,
+    "etf_00881_cap": 0.3,
+    "transaction_cost_bps": 10,
+    "rebalance_convention": "month_end",
+    "scipy_available": true
+  },
+  "outputs": {
+    "run_root": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/oracle_probability_positive_control/run_20260728_005644",
+    "table_S35": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/oracle_probability_positive_control/run_20260728_005644/tables/table_S35_oracle_positive_control_design.csv",
+    "table_S36": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/oracle_probability_positive_control/run_20260728_005644/tables/table_S36_oracle_positive_control_performance.csv",
+    "table_S36b": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/oracle_probability_positive_control/run_20260728_005644/tables/table_S36b_oracle_positive_control_ordered_compact.csv",
+    "table_S37": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/oracle_probability_positive_control/run_20260728_005644/tables/table_S37_oracle_ordered_vs_shuffled_comparison.csv",
+    "returns": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/oracle_probability_positive_control/run_20260728_005644/returns/oracle_positive_control_returns.parquet",
+    "weights": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/oracle_probability_positive_control/run_20260728_005644/weights/oracle_positive_control_weights.parquet",
+    "diagnostics": "/content/drive/MyDrive/AURORA_TWETF/outputs/AURORA_TWETF/oracle_probability_positive_control/run_20260728_005644/diagnostics/oracle_positive_control_diagnostics.csv"
+  },
+  "educational_note": "Research diagnostics only; not personalized financial advice."
+}
